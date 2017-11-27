@@ -1,0 +1,153 @@
+<div class="ui container middle aligned">	
+	<div class="ui raised segment" style="margin-top: 100px; min-height: 700px; text-align: center">
+		<h1 class="ui center aligned header" style="margin-bottom: 50px">Thank you for answering our survey!</h1>
+		
+		As a <strong><%= @user_type %></strong>, these are the obtained weights of the 8 quality sub-characteristics based on your answers.
+		<br>
+		<div class="ui mini green four statistics" style="margin-top: 30px">
+		  <div class="statistic">
+		    <div class="value">
+		      <%= @f %>%
+		    </div>
+		    <div class="label">
+		      Appropriate Recognizability
+		    </div>
+		  </div>
+		  <div class="statistic">
+		    <div class="value">
+		      <%= @r %>%
+		    </div>
+		    <div class="label">
+		      Learnability
+		    </div>
+		  </div>
+		  <div class="statistic">
+		    <div class="value">
+		      <%= @p %>%
+		    </div>
+		    <div class="label">
+		      Operability
+		    </div>
+		  </div>
+		  <div class="statistic">
+		    <div class="value">
+		      <%= @o %>%
+		    </div>
+		    <div class="label">
+		      User Error Protection
+		    </div>
+		  </div>
+		</div>
+		<div class="ui mini green four statistics" style="margin-top: 20px">
+		  <div class="statistic">
+		    <div class="value">
+		      <%= @s %>%
+		    </div>
+		    <div class="label">
+		      User Interface Aesthetics
+		    </div>
+		  </div>
+		  <div class="statistic">
+		    <div class="value">
+		      <%= @c %>%
+		    </div>
+		    <div class="label">
+		      Accessibility
+		    </div>
+		  </div>
+		  <div class="statistic">
+		    <div class="value">
+		      <%= @m %>%
+		    </div>
+		    <div class="label">
+		      Perceived Usefulness 
+		    </div>
+		  </div>
+		  <div class="statistic">
+		    <div class="value">
+		      <%= @t %>%
+		    </div>
+		    <div class="label">
+		      Perceived Ease of Use
+		    </div>
+		  </div>
+		</div>
+		
+		<br>
+		<br>
+		<br>
+		<br>
+		These are the <strong>average</strong> obtained weights of the 8 quality sub-characteristics based on all <strong><%= @user_type %></strong>'s answers.
+		<br>
+		<div class="ui mini green four statistics" style="margin-top: 30px">
+		  <div class="statistic">
+		    <div class="value">
+		      <%= @f_ave %>%
+		    </div>
+		    <div class="label">
+		      Appropriate Recognizability
+		    </div>
+		  </div>
+		  <div class="statistic">
+		    <div class="value">
+		      <%= @r_ave %>%
+		    </div>
+		    <div class="label">
+		      Learnability
+		    </div>
+		  </div>
+		  <div class="statistic">
+		    <div class="value">
+		      <%= @p_ave %>%
+		    </div>
+		    <div class="label">
+		      Operability
+		    </div>
+		  </div>
+		  <div class="statistic">
+		    <div class="value">
+		      <%= @o_ave %>%
+		    </div>
+		    <div class="label">
+		      User Error Protection
+		    </div>
+		  </div>
+		</div>
+		<div class="ui mini green four statistics" style="margin-top: 20px">
+		  <div class="statistic">
+		    <div class="value">
+		      <%= @s_ave %>%
+		    </div>
+		    <div class="label">
+		      User Interface Aesthetics
+		    </div>
+		  </div>
+		  <div class="statistic">
+		    <div class="value">
+		      <%= @c_ave %>%
+		    </div>
+		    <div class="label">
+		      Accessibility
+		    </div>
+		  </div>
+		  <div class="statistic">
+		    <div class="value">
+		      <%= @m_ave %>%
+		    </div>
+		    <div class="label">
+		      Perceived Usefulness 
+		    </div>
+		  </div>
+		  <div class="statistic">
+		    <div class="value">
+		      <%= @t_ave %>%
+		    </div>
+		    <div class="label">
+		      Perceived Ease of Use
+		    </div>
+		  </div>
+		</div>
+	
+		
+	</div>
+</div>
