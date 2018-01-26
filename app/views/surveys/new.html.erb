@@ -101,21 +101,6 @@
 							</div>
 						</a>
 						<br>
-						<a class="item">
-							<i class="right triangle icon"></i>
-							<div class="content">
-								<div class="header" style="cursor:pointer" id="maint">Perceived Usefulness</div>
-								<div class="description">This characteristic represents the degree to which a person believes that using a particular system would enhance his/her job performance.</div>
-							</div>
-						</a>
-						<br>
-						<a class="item">
-							<i class="right triangle icon"></i>
-							<div class="content">
-								<div class="header" style="cursor:pointer" id="trans">Perceived Ease of Use</div>
-								<div class="description">This characteristic refers to the degree to which a person believes that using a particular system would be free from effort.</div>
-							</div>
-						</a>
 					</div>
 				</div>
 				<div class="column">
@@ -126,7 +111,7 @@
 									<!-- Functional Suitabiltiy vs Learnability -->
 									<h4 class="ui right floated header">Appropriate Recognizability</h4>
 									<h4 class="ui left floated header">Learnability</h4>							
-									<%= form.range_field :fr, :min=>1, :max=>9, :value=>5, :id=>"fr_input_id", :onchange=>"fr(this.value)"%>
+									<%= form.range_field :ar_l, :min=>1, :max=>9, :value=>5, :id=>"fr_input_id", :onchange=>"fr(this.value)"%>
 									<h5 class="ui green center aligned header" name="fr_output" id="fr_output_id">Equally prefers Learnability and Appropriate Recognizability</h5>
 									
 								</td>
@@ -136,7 +121,7 @@
 									<!-- Appropriate Recognizability vs Operability -->
 									<h4 class="ui right floated header">Appropriate Recognizability</h4>
 									<h4 class="ui left floated header">Operability</h4>
-									<%= form.range_field :fp, :min=>1, :max=>9, :value=>5, :id=>"fp_input_id", :onchange=>"fp(this.value)"%>
+									<%= form.range_field :ar_o, :min=>1, :max=>9, :value=>5, :id=>"fp_input_id", :onchange=>"fp(this.value)"%>
 									<h5 class="ui green center aligned header" name="fp_output" id="fp_output_id">Equally prefers Operability and Appropriate Recognizability</h5>
 								</td>
 							</tr>
@@ -145,7 +130,7 @@
 									<!-- Appropriate Recognizability vs User Error Protection -->
 									<h4 class="ui right floated header">Appropriate Recognizability</h4>
 									<h4 class="ui left floated header">User Error Protection</h4>
-									<%= form.range_field :fo, :min=>1, :max=>9, :value=>5, :id=>"fo_input_id", :onchange=>"fo(this.value)"%>
+									<%= form.range_field :ar_uep, :min=>1, :max=>9, :value=>5, :id=>"fo_input_id", :onchange=>"fo(this.value)"%>
 									<h5 class="ui green center aligned header" name="fo_output" id="fo_output_id">Equally prefers User Error Protection and Appropriate Recognizability</h5>
 								</td>
 							</tr>
@@ -154,7 +139,7 @@
 									<!-- Appropriate Recognizability vs User Interface Aesthetics -->
 									<h4 class="ui right floated header">Appropriate Recognizability</h4>
 									<h4 class="ui left floated header">User Interface Aesthetics</h4>
-									<%= form.range_field :fs, :min=>1, :max=>9, :value=>5, :id=>"fs_input_id", :onchange=>"fs(this.value)"%>
+									<%= form.range_field :ar_uia, :min=>1, :max=>9, :value=>5, :id=>"fs_input_id", :onchange=>"fs(this.value)"%>
 									<h5 class="ui green center aligned header" name="fs_output" id="fs_output_id">Equally prefers User Interface Aesthetics and Appropriate Recognizability</h5>
 								</td>
 							</tr>
@@ -163,34 +148,17 @@
 									<!-- Appropriate Recognizability vs Accessibility -->
 									<h4 class="ui right floated header">Appropriate Recognizability</h4>
 									<h4 class="ui left floated header">Accessibility</h4>
-									<%= form.range_field :fc, :min=>1, :max=>9, :value=>5, :id=>"fc_input_id", :onchange=>"fc(this.value)"%>
+									<%= form.range_field :ar_a, :min=>1, :max=>9, :value=>5, :id=>"fc_input_id", :onchange=>"fc(this.value)"%>
 									<h5 class="ui green center aligned header" name="fc_output" id="fc_output_id">Equally prefers Accessibility and Appropriate Recognizability</h5>
 								</td>
 							</tr>
-							<tr>
-								<td>
-									<!-- Appropriate Recognizability vs Perceived Usefulness -->
-									<h4 class="ui right floated header">Appropriate Recognizability</h4>
-									<h4 class="ui left floated header">Perceived Usefulness</h4>
-									<%= form.range_field :fm, :min=>1, :max=>9, :value=>5, :id=>"fm_input_id", :onchange=>"fm(this.value)"%>
-									<h5 class="ui green center aligned header" name="fm_output" id="fm_output_id">Equally prefers Perceived Usefulness and Appropriate Recognizability</h5>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<!-- Appropriate Recognizability vs Perceived Ease of Use -->
-									<h4 class="ui right floated header">Appropriate Recognizability</h4>
-									<h4 class="ui left floated header">Perceived Ease of Use</h4>
-									<%= form.range_field :ft, :min=>1, :max=>9, :value=>5, :id=>"ft_input_id", :onchange=>"ft(this.value)"%>
-									<h5 class="ui green center aligned header" name="ft_output" id="ft_output_id">Equally prefers Perceived Ease of Use and Appropriate Recognizability</h5>
-								</td>
-							</tr>
+
 							<tr>
 								<td>
 									<!-- Learnability vs Operability -->
 									<h4 class="ui right floated header">Learnability</h4>
 									<h4 class="ui left floated header">Operability</h4>
-									<%= form.range_field :rp, :min=>1, :max=>9, :value=>5, :id=>"rp_input_id", :onchange=>"rp(this.value)"%>
+									<%= form.range_field :l_o, :min=>1, :max=>9, :value=>5, :id=>"rp_input_id", :onchange=>"rp(this.value)"%>
 									<h5 class="ui green center aligned header" name="rp_output" id="rp_output_id">Equally prefers Operability and Learnability</h5>
 								</td>
 							</tr>
@@ -199,7 +167,7 @@
 									<!-- Learnability vs User Error Protection -->
 									<h4 class="ui right floated header">Learnability</h4>
 									<h4 class="ui left floated header">User Error Protection</h4>
-									<%= form.range_field :ro, :min=>1, :max=>9, :value=>5, :id=>"ro_input_id", :onchange=>"ro(this.value)"%>
+									<%= form.range_field :l_uep, :min=>1, :max=>9, :value=>5, :id=>"ro_input_id", :onchange=>"ro(this.value)"%>
 									<h5 class="ui green center aligned header" name="ro_output" id="ro_output_id">Equally prefers User Error Protection and Learnability</h5>
 								</td>
 							</tr>
@@ -208,7 +176,7 @@
 									<!-- Learnability vs User Interface Aesthetics -->
 									<h4 class="ui right floated header">Learnability</h4>
 									<h4 class="ui left floated header">User Interface Aesthetics</h4>
-									<%= form.range_field :rs, :min=>1, :max=>9, :value=>5, :id=>"rs_input_id", :onchange=>"rs(this.value)"%>
+									<%= form.range_field :l_uia, :min=>1, :max=>9, :value=>5, :id=>"rs_input_id", :onchange=>"rs(this.value)"%>
 									<h5 class="ui green center aligned header" name="rs_output" id="rs_output_id">Equally prefers User Interface Aesthetics and Learnability</h5>
 								</td>
 							</tr>
@@ -217,34 +185,17 @@
 									<!-- Learnability vs Compatability -->
 									<h4 class="ui right floated header">Learnability</h4>
 									<h4 class="ui left floated header">Accessibility</h4>
-									<%= form.range_field :rc, :min=>1, :max=>9, :value=>5, :id=>"rc_input_id", :onchange=>"rc(this.value)"%>
+									<%= form.range_field :l_a, :min=>1, :max=>9, :value=>5, :id=>"rc_input_id", :onchange=>"rc(this.value)"%>
 									<h5 class="ui green center aligned header" name="rc_output" id="rc_output_id">Equally prefers Accessibility and Learnability</h5>
 								</td>
 							</tr>
-							<tr>
-								<td>
-									<!-- Learnability vs Perceived Usefulness -->
-									<h4 class="ui right floated header">Learnability</h4>
-									<h4 class="ui left floated header">Perceived Usefulness</h4>
-									<%= form.range_field :rm, :min=>1, :max=>9, :value=>5, :id=>"rm_input_id", :onchange=>"rm(this.value)"%>
-									<h5 class="ui green center aligned header" name="rm_output" id="rm_output_id">Equally prefers Perceived Usefulness and Learnability</h5>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<!-- Learnability vs Perceived Ease of Use -->
-									<h4 class="ui right floated header">Learnability</h4>
-									<h4 class="ui left floated header">Perceived Ease of Use</h4>
-									<%= form.range_field :rt, :min=>1, :max=>9, :value=>5, :id=>"rt_input_id", :onchange=>"rt(this.value)"%>
-									<h5 class="ui green center aligned header" name="rt_output" id="rt_output_id">Equally prefers Perceived Ease of Use and Learnability</h5>
-								</td>
-							</tr>
+
 							<tr>
 								<td>
 									<!-- Operability vs User Error Protection -->
 									<h4 class="ui right floated header">Operability</h4>
 									<h4 class="ui left floated header">User Error Protection</h4>
-									<%= form.range_field :po, :min=>1, :max=>9, :value=>5, :id=>"po_input_id", :onchange=>"po(this.value)"%>
+									<%= form.range_field :o_uep, :min=>1, :max=>9, :value=>5, :id=>"po_input_id", :onchange=>"po(this.value)"%>
 									<h5 class="ui green center aligned header" name="po_output" id="po_output_id">Equally prefers User Error Protection and Operability</h5>
 								</td>
 							</tr>
@@ -253,7 +204,7 @@
 									<!-- Operability vs User Interface Aesthetics -->
 									<h4 class="ui right floated header">Operability</h4>
 									<h4 class="ui left floated header">User Interface Aesthetics</h4>
-									<%= form.range_field :ps, :min=>1, :max=>9, :value=>5, :id=>"ps_input_id", :onchange=>"ps(this.value)"%>
+									<%= form.range_field :o_uia, :min=>1, :max=>9, :value=>5, :id=>"ps_input_id", :onchange=>"ps(this.value)"%>
 									<h5 class="ui green center aligned header" name="ps_output" id="ps_output_id">Equally prefers User Interface Aesthetics and Operability</h5>
 								</td>
 							</tr>
@@ -262,34 +213,17 @@
 									<!-- Operability vs Accessibility -->
 									<h4 class="ui right floated header">Operability</h4>
 									<h4 class="ui left floated header">Accessibility</h4>
-									<%= form.range_field :pc, :min=>1, :max=>9, :value=>5, :id=>"pc_input_id", :onchange=>"pc(this.value)"%>
+									<%= form.range_field :o_a, :min=>1, :max=>9, :value=>5, :id=>"pc_input_id", :onchange=>"pc(this.value)"%>
 									<h5 class="ui green center aligned header" name="pc_output" id="pc_output_id">Equally prefers Accessibility and Operability</h5>
 								</td>
 							</tr>
-							<tr>
-								<td>
-									<!-- Operability vs Perceived Usefulness -->
-									<h4 class="ui right floated header">Operability</h4>
-									<h4 class="ui left floated header">Perceived Usefulness</h4>
-									<%= form.range_field :pm, :min=>1, :max=>9, :value=>5, :id=>"pm_input_id", :onchange=>"pm(this.value)"%>
-									<h5 class="ui green center aligned header" name="pm_output" id="pm_output_id">Equally prefers Perceived Usefulness and Operability</h5>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<!-- Operability vs Perceived Ease of Use -->
-									<h4 class="ui right floated header">Operability</h4>
-									<h4 class="ui left floated header">Perceived Ease of Use</h4>
-									<%= form.range_field :pt, :min=>1, :max=>9, :value=>5, :id=>"pt_input_id", :onchange=>"pt(this.value)"%>
-									<h5 class="ui green center aligned header" name="pt_output" id="pt_output_id">Equally prefers Perceived Ease of Use and Operability</h5>
-								</td>
-							</tr>
+	
 							<tr>
 								<td>
 									<!-- User Error Protection vs User Interface Aesthetics -->
 									<h4 class="ui right floated header">User Error Protection</h4>
 									<h4 class="ui left floated header">User Interface Aesthetics</h4>
-									<%= form.range_field :os, :min=>1, :max=>9, :value=>5, :id=>"os_input_id", :onchange=>"os(this.value)"%>
+									<%= form.range_field :uep_uia, :min=>1, :max=>9, :value=>5, :id=>"os_input_id", :onchange=>"os(this.value)"%>
 									<h5 class="ui green center aligned header" name="os_output" id="os_output_id">Equally prefers User Interface Aesthetics and User Error Protection</h5>
 								</td>
 							</tr>
@@ -298,82 +232,22 @@
 									<!-- User Error Protection vs Accessibility -->
 									<h4 class="ui right floated header">User Error Protection</h4>
 									<h4 class="ui left floated header">Accessibility</h4>
-									<%= form.range_field :oc, :min=>1, :max=>9, :value=>5, :id=>"oc_input_id", :onchange=>"oc(this.value)"%>
+									<%= form.range_field :uep_a, :min=>1, :max=>9, :value=>5, :id=>"oc_input_id", :onchange=>"oc(this.value)"%>
 									<h5 class="ui green center aligned header" name="oc_output" id="oc_output_id">Equally prefers Accessibility and User Error Protection</h5>
 								</td>
 							</tr>
-							<tr>
-								<td>
-									<!-- User Error Protection vs Maintainabilitiy -->
-									<h4 class="ui right floated header">User Error Protection</h4>
-									<h4 class="ui left floated header">Perceived Usefulness</h4>
-									<%= form.range_field :om, :min=>1, :max=>9, :value=>5, :id=>"om_input_id", :onchange=>"om(this.value)"%>
-									<h5 class="ui green center aligned header" name="om_output" id="om_output_id">Equally prefers Perceived Usefulness and User Error Protection</h5>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<!-- User Error Protection vs Perceived Ease of Use -->
-									<h4 class="ui right floated header">User Error Protection</h4>
-									<h4 class="ui left floated header">Perceived Ease of Use</h4>
-									<%= form.range_field :ot, :min=>1, :max=>9, :value=>5, :id=>"ot_input_id", :onchange=>"ot(this.value)"%>
-									<h5 class="ui green center aligned header" name="ot_output" id="ot_output_id">Equally prefers Perceived Ease of Use and User Error Protection</h5>
-								</td>
-							</tr>
+	
+
 							<tr>
 								<td>
 									<!-- User Interface Aesthetics vs Accessibility -->
 									<h4 class="ui right floated header">User Interface Aesthetics</h4>
 									<h4 class="ui left floated header">Accessibility</h4>
-									<%= form.range_field :sc, :min=>1, :max=>9, :value=>5, :id=>"sc_input_id", :onchange=>"sc(this.value)"%>
+									<%= form.range_field :uia_a, :min=>1, :max=>9, :value=>5, :id=>"sc_input_id", :onchange=>"sc(this.value)"%>
 									<h5 class="ui green center aligned header" name="sc_output" id="sc_output_id">Equally prefers Accessibility and User Interface Aesthetics</h5>
 								</td>
 							</tr>
-							<tr>
-								<td>
-									<!-- User Interface Aesthetics vs Perceived Usefulness -->
-									<h4 class="ui right floated header">User Interface Aesthetics</h4>
-									<h4 class="ui left floated header">Perceived Usefulness</h4>
-									<%= form.range_field :sm, :min=>1, :max=>9, :value=>5, :id=>"sm_input_id", :onchange=>"sm(this.value)"%>
-									<h5 class="ui green center aligned header" name="sm_output" id="sm_output_id">Equally prefers Perceived Usefulness and User Interface Aesthetics</h5>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<!-- User Interface Aesthetics vs Perceived Ease of Use -->
-									<h4 class="ui right floated header">User Interface Aesthetics</h4>
-									<h4 class="ui left floated header">Perceived Ease of Use</h4>
-									<%= form.range_field :st, :min=>1, :max=>9, :value=>5, :id=>"st_input_id", :onchange=>"st(this.value)"%>
-									<h5 class="ui green center aligned header" name="st_output" id="st_output_id">Equally prefers Perceived Ease of Use and User Interface Aesthetics</h5>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<!-- Accessibility vs Perceived Usefulness -->
-									<h4 class="ui right floated header">Accessibility</h4>
-									<h4 class="ui left floated header">Perceived Usefulness</h4>
-									<%= form.range_field :cm, :min=>1, :max=>9, :value=>5, :id=>"cm_input_id", :onchange=>"cm(this.value)"%>
-									<h5 class="ui green center aligned header" name="cm_output" id="cm_output_id">Equally prefers Perceived Usefulness and Accessibility</h5>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<!-- Accessibility vs Perceived Ease of Use -->
-									<h4 class="ui right floated header">Accessibility</h4>
-									<h4 class="ui left floated header">Perceived Ease of Use</h4>
-									<%= form.range_field :ct, :min=>1, :max=>9, :value=>5, :id=>"ct_input_id", :onchange=>"ct(this.value)"%>
-									<h5 class="ui green center aligned header" name="ct_output" id="ct_output_id">Equally prefers Perceived Ease of Use and Accessibility</h5>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<!-- Perceived Usefulness vs Perceived Ease of Use -->
-									<h4 class="ui right floated header">Perceived Usefulness</h4>
-									<h4 class="ui left floated header">Perceived Ease of Use</h4>
-									<%= form.range_field :mt, :min=>1, :max=>9, :value=>5, :id=>"mt_input_id", :onchange=>"mt(this.value)"%>
-									<h5 class="ui green center aligned header" name="mt_output" id="mt_output_id">Equally prefers Perceived Ease of Use and Perceived Usefulness</h5>
-								</td>
-							</tr>
+
 						</tbody>
 					</table>
 				</div>

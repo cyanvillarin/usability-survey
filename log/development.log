@@ -17927,3 +17927,923 @@ Processing by SurveysController#thank as HTML
 Completed 200 OK in 81ms (Views: 77.8ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/thank" for 127.0.0.1 at 2017-11-28 00:44:13 +0800
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SurveysController#thank as HTML
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `*' for nil:NilClass):
+  
+app/controllers/surveys_controller.rb:12:in `thank'
+Started GET "/thank" for 127.0.0.1 at 2017-11-28 00:44:15 +0800
+Processing by SurveysController#thank as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `*' for nil:NilClass):
+  
+app/controllers/surveys_controller.rb:12:in `thank'
+Started GET "/" for 127.0.0.1 at 2017-11-28 00:44:19 +0800
+Processing by SurveysController#index as HTML
+  Rendering surveys/index.html.erb within layouts/application
+Started GET "/surveys/new" for 127.0.0.1 at 2017-11-28 00:44:19 +0800
+Processing by SurveysController#new as HTML
+  Rendered surveys/index.html.erb within layouts/application (253.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 380ms (Views: 377.7ms | ActiveRecord: 0.0ms)
+
+
+  Rendering surveys/new.html.erb within layouts/application
+  Rendered surveys/new.html.erb within layouts/application (16.3ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 365ms (Views: 95.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/surveys/new" for 127.0.0.1 at 2017-11-28 00:44:26 +0800
+Processing by SurveysController#new as HTML
+  Rendering surveys/new.html.erb within layouts/application
+  Rendered surveys/new.html.erb within layouts/application (6.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 125ms (Views: 122.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/surveys" for 127.0.0.1 at 2017-11-28 00:44:46 +0800
+Processing by SurveysController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9oZkM39EgIWwaUdD/BpmcvYWDORxAtMPD2LLODKB1bJfSiL9iNLXEE7qU7i1X9u81mtz459a+k7oAuTEvUpz1Q==", "survey"=>{"name"=>"apqrpqrp", "user_type"=>"developer", "fr"=>"7", "fp"=>"7", "fo"=>"7", "fs"=>"7", "fc"=>"7", "fm"=>"7", "ft"=>"7", "rp"=>"5", "ro"=>"5", "rs"=>"5", "rc"=>"5", "rm"=>"5", "rt"=>"5", "po"=>"5", "ps"=>"5", "pc"=>"5", "pm"=>"5", "pt"=>"5", "os"=>"5", "oc"=>"5", "om"=>"5", "ot"=>"5", "sc"=>"5", "sm"=>"5", "st"=>"5", "cm"=>"5", "ct"=>"5", "mt"=>"5"}, "commit"=>"Submit Survey"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "surveys" ("name", "user_type", "created_at", "updated_at", "fr", "fp", "fo", "fs", "fc", "fm", "ft", "rp", "ro", "rs", "rc", "rm", "rt", "po", "ps", "pc", "pm", "pt", "os", "oc", "om", "ot", "sc", "sm", "st", "cm", "ct", "mt") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "apqrpqrp"], ["user_type", "developer"], ["created_at", "2017-11-27 16:44:46.475152"], ["updated_at", "2017-11-27 16:44:46.475152"], ["fr", 7.0], ["fp", 7.0], ["fo", 7.0], ["fs", 7.0], ["fc", 7.0], ["fm", 7.0], ["ft", 7.0], ["rp", 5.0], ["ro", 5.0], ["rs", 5.0], ["rc", 5.0], ["rm", 5.0], ["rt", 5.0], ["po", 5.0], ["ps", 5.0], ["pc", 5.0], ["pm", 5.0], ["pt", 5.0], ["os", 5.0], ["oc", 5.0], ["om", 5.0], ["ot", 5.0], ["sc", 5.0], ["sm", 5.0], ["st", 5.0], ["cm", 5.0], ["ct", 5.0], ["mt", 5.0]]
+  [1m[35m (3.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "surveys" SET "updated_at" = ?, "fr" = ?, "fp" = ?, "fo" = ?, "fs" = ?, "fc" = ?, "fm" = ?, "ft" = ?, "rp" = ?, "ro" = ?, "rs" = ?, "rc" = ?, "rm" = ?, "rt" = ?, "po" = ?, "ps" = ?, "pc" = ?, "pm" = ?, "pt" = ?, "os" = ?, "oc" = ?, "om" = ?, "ot" = ?, "sc" = ?, "sm" = ?, "st" = ?, "cm" = ?, "ct" = ?, "mt" = ?, "f_weight" = ?, "r_weight" = ?, "p_weight" = ?, "o_weight" = ?, "s_weight" = ?, "c_weight" = ?, "m_weight" = ?, "t_weight" = ? WHERE "surveys"."id" = ?[0m  [["updated_at", "2017-11-27 16:44:46.489437"], ["fr", 3.0], ["fp", 3.0], ["fo", 3.0], ["fs", 3.0], ["fc", 3.0], ["fm", 3.0], ["ft", 3.0], ["rp", 1.0], ["ro", 1.0], ["rs", 1.0], ["rc", 1.0], ["rm", 1.0], ["rt", 1.0], ["po", 1.0], ["ps", 1.0], ["pc", 1.0], ["pm", 1.0], ["pt", 1.0], ["os", 1.0], ["oc", 1.0], ["om", 1.0], ["ot", 1.0], ["sc", 1.0], ["sm", 1.0], ["st", 1.0], ["cm", 1.0], ["ct", 1.0], ["mt", 1.0], ["f_weight", 0.30000000000000004], ["r_weight", 0.09999999999999999], ["p_weight", 0.10000000000000002], ["o_weight", 0.10000000000000002], ["s_weight", 0.10000000000000002], ["c_weight", 0.10000000000000002], ["m_weight", 0.10000000000000002], ["t_weight", 0.10000000000000002], ["id", 980191131]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/thank
+Completed 302 Found in 27ms (ActiveRecord: 5.7ms)
+
+
+Started GET "/thank" for 127.0.0.1 at 2017-11-28 00:44:46 +0800
+Processing by SurveysController#thank as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "surveys" WHERE (user_type = 'developer')[0m
+  [1m[36mSurvey Load (0.3ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_type = 'developer')[0m
+  Rendering surveys/thank.html.erb within layouts/application
+  Rendered surveys/thank.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 75ms (Views: 70.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/thank" for 127.0.0.1 at 2017-11-28 00:44:57 +0800
+Processing by SurveysController#thank as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "surveys" WHERE (user_type = 'developer')[0m
+  [1m[36mSurvey Load (0.3ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_type = 'developer')[0m
+  Rendering surveys/thank.html.erb within layouts/application
+  Rendered surveys/thank.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 80ms (Views: 74.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-28 11:56:08 +0800
+Started GET "/" for 127.0.0.1 at 2017-11-28 11:56:08 +0800
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SurveysController#index as HTML
+Processing by SurveysController#index as HTML
+  Rendering surveys/index.html.erb within layouts/application
+  Rendering surveys/index.html.erb within layouts/application
+  Rendered surveys/index.html.erb within layouts/application (457.0ms)
+  Rendered surveys/index.html.erb within layouts/application (513.3ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 738ms (Views: 736.2ms | ActiveRecord: 0.0ms)
+
+
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 748ms (Views: 736.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/surveys/new" for 127.0.0.1 at 2017-11-28 11:56:12 +0800
+Processing by SurveysController#new as HTML
+  Rendering surveys/new.html.erb within layouts/application
+  Rendered surveys/new.html.erb within layouts/application (15.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 130ms (Views: 74.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-28 22:49:09 +0800
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2017-11-28 22:49:09 +0800
+Processing by SurveysController#index as HTML
+Processing by SurveysController#index as HTML
+  Rendering surveys/index.html.erb within layouts/application
+  Rendering surveys/index.html.erb within layouts/application
+  Rendered surveys/index.html.erb within layouts/application (488.0ms)
+  Rendered surveys/index.html.erb within layouts/application (453.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 765ms (Views: 763.2ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 784ms (Views: 775.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/surveys/new" for 127.0.0.1 at 2017-11-28 22:49:11 +0800
+Processing by SurveysController#new as HTML
+  Rendering surveys/new.html.erb within layouts/application
+  Rendered surveys/new.html.erb within layouts/application (23.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 197ms (Views: 122.6ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/surveys" for 127.0.0.1 at 2017-11-28 22:49:49 +0800
+Processing by SurveysController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JRbNH4d9vjLQf9xi0QFXYKojt0eyanEjb/6MhelUXIoqGgmDW1BGqV863QgYDfYkWKkx4ODK0JRc13ortT/Gwg==", "survey"=>{"name"=>"ABLE", "user_type"=>"developer", "fr"=>"4", "fp"=>"2", "fo"=>"5", "fs"=>"6", "fc"=>"7", "fm"=>"5", "ft"=>"5", "rp"=>"5", "ro"=>"5", "rs"=>"5", "rc"=>"5", "rm"=>"5", "rt"=>"5", "po"=>"5", "ps"=>"5", "pc"=>"5", "pm"=>"5", "pt"=>"5", "os"=>"5", "oc"=>"5", "om"=>"5", "ot"=>"5", "sc"=>"5", "sm"=>"5", "st"=>"5", "cm"=>"5", "ct"=>"5", "mt"=>"5"}, "commit"=>"Submit Survey"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (4.3ms)[0m  [1m[32mINSERT INTO "surveys" ("name", "user_type", "created_at", "updated_at", "fr", "fp", "fo", "fs", "fc", "fm", "ft", "rp", "ro", "rs", "rc", "rm", "rt", "po", "ps", "pc", "pm", "pt", "os", "oc", "om", "ot", "sc", "sm", "st", "cm", "ct", "mt") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "ABLE"], ["user_type", "developer"], ["created_at", "2017-11-28 14:49:49.246428"], ["updated_at", "2017-11-28 14:49:49.246428"], ["fr", 4.0], ["fp", 2.0], ["fo", 5.0], ["fs", 6.0], ["fc", 7.0], ["fm", 5.0], ["ft", 5.0], ["rp", 5.0], ["ro", 5.0], ["rs", 5.0], ["rc", 5.0], ["rm", 5.0], ["rt", 5.0], ["po", 5.0], ["ps", 5.0], ["pc", 5.0], ["pm", 5.0], ["pt", 5.0], ["os", 5.0], ["oc", 5.0], ["om", 5.0], ["ot", 5.0], ["sc", 5.0], ["sm", 5.0], ["st", 5.0], ["cm", 5.0], ["ct", 5.0], ["mt", 5.0]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "surveys" SET "updated_at" = ?, "fr" = ?, "fp" = ?, "fo" = ?, "fs" = ?, "fc" = ?, "fm" = ?, "ft" = ?, "rp" = ?, "ro" = ?, "rs" = ?, "rc" = ?, "rm" = ?, "rt" = ?, "po" = ?, "ps" = ?, "pc" = ?, "pm" = ?, "pt" = ?, "os" = ?, "oc" = ?, "om" = ?, "ot" = ?, "sc" = ?, "sm" = ?, "st" = ?, "cm" = ?, "ct" = ?, "mt" = ?, "f_weight" = ?, "r_weight" = ?, "p_weight" = ?, "o_weight" = ?, "s_weight" = ?, "c_weight" = ?, "m_weight" = ?, "t_weight" = ? WHERE "surveys"."id" = ?[0m  [["updated_at", "2017-11-28 14:49:49.264585"], ["fr", 0.5], ["fp", 0.25], ["fo", 1.0], ["fs", 2.0], ["fc", 3.0], ["fm", 1.0], ["ft", 1.0], ["rp", 1.0], ["ro", 1.0], ["rs", 1.0], ["rc", 1.0], ["rm", 1.0], ["rt", 1.0], ["po", 1.0], ["ps", 1.0], ["pc", 1.0], ["pm", 1.0], ["pt", 1.0], ["os", 1.0], ["oc", 1.0], ["om", 1.0], ["ot", 1.0], ["sc", 1.0], ["sm", 1.0], ["st", 1.0], ["cm", 1.0], ["ct", 1.0], ["mt", 1.0], ["f_weight", 0.13321901601038633], ["r_weight", 0.13314250552072987], ["p_weight", 0.16444645175536746], ["o_weight", 0.11749053240341097], ["s_weight", 0.10966454584475158], ["c_weight", 0.10705588365853169], ["m_weight", 0.11749053240341097], ["t_weight", 0.11749053240341097], ["id", 980191132]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/thank
+Completed 302 Found in 30ms (ActiveRecord: 6.3ms)
+
+
+Started GET "/thank" for 127.0.0.1 at 2017-11-28 22:49:49 +0800
+Processing by SurveysController#thank as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "surveys" WHERE (user_type = 'developer')[0m
+  [1m[36mSurvey Load (0.3ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_type = 'developer')[0m
+  Rendering surveys/thank.html.erb within layouts/application
+  Rendered surveys/thank.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 99ms (Views: 93.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-20 15:55:48 +0800
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SurveysController#index as HTML
+  Rendering surveys/index.html.erb within layouts/application
+  Rendered surveys/index.html.erb within layouts/application (383.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 554ms (Views: 544.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/surveys/new" for 127.0.0.1 at 2018-01-20 15:55:54 +0800
+Processing by SurveysController#new as HTML
+  Rendering surveys/new.html.erb within layouts/application
+  Rendered surveys/new.html.erb within layouts/application (57.0ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 193ms (Views: 135.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/surveys/new" for 127.0.0.1 at 2018-01-20 15:57:37 +0800
+Processing by SurveysController#new as HTML
+  Rendering surveys/new.html.erb within layouts/application
+  Rendered surveys/new.html.erb within layouts/application (6.1ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 89ms (Views: 87.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-26 14:28:14 +0800
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SurveysController#index as HTML
+  Rendering surveys/index.html.erb within layouts/application
+  Rendered surveys/index.html.erb within layouts/application (353.1ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 528ms (Views: 519.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/surveys/new" for 127.0.0.1 at 2018-01-26 14:28:20 +0800
+Processing by SurveysController#new as HTML
+  Rendering surveys/new.html.erb within layouts/application
+  Rendered surveys/new.html.erb within layouts/application (54.6ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 186ms (Views: 129.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/thank" for 127.0.0.1 at 2018-01-26 14:31:02 +0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SurveysController#thank as HTML
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `*' for nil:NilClass):
+  
+app/controllers/surveys_controller.rb:12:in `thank'
+Started GET "/" for 127.0.0.1 at 2018-01-26 14:31:04 +0800
+Processing by SurveysController#index as HTML
+  Rendering surveys/index.html.erb within layouts/application
+Started GET "/surveys/new" for 127.0.0.1 at 2018-01-26 14:31:04 +0800
+Processing by SurveysController#new as HTML
+  Rendered surveys/index.html.erb within layouts/application (230.9ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 343ms (Views: 340.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-26 14:31:05 +0800
+  Rendering surveys/new.html.erb within layouts/application
+Processing by SurveysController#index as HTML
+  Rendering surveys/index.html.erb within layouts/application
+  Rendered surveys/index.html.erb within layouts/application (1.6ms)
+  Rendered surveys/new.html.erb within layouts/application (35.1ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 141ms (Views: 138.4ms | ActiveRecord: 0.0ms)
+
+
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 420ms (Views: 178.6ms | ActiveRecord: 1.2ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to EditColumns (20180126070659)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to EditColumns (20180126070659)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TEMPORARY TABLE "asurveys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT NULL, "user_type" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "ar_l" float DEFAULT NULL, "fp" float DEFAULT NULL, "fo" float DEFAULT NULL, "fs" float DEFAULT NULL, "fc" float DEFAULT NULL, "fm" float DEFAULT NULL, "ft" float DEFAULT NULL, "rp" float DEFAULT NULL, "ro" float DEFAULT NULL, "rs" float DEFAULT NULL, "rc" float DEFAULT NULL, "rm" float DEFAULT NULL, "rt" float DEFAULT NULL, "po" float DEFAULT NULL, "ps" float DEFAULT NULL, "pc" float DEFAULT NULL, "pm" float DEFAULT NULL, "pt" float DEFAULT NULL, "os" float DEFAULT NULL, "oc" float DEFAULT NULL, "om" float DEFAULT NULL, "ot" float DEFAULT NULL, "sc" float DEFAULT NULL, "sm" float DEFAULT NULL, "st" float DEFAULT NULL, "cm" float DEFAULT NULL, "ct" float DEFAULT NULL, "mt" float DEFAULT NULL, "f_weight" float DEFAULT NULL, "r_weight" float DEFAULT NULL, "p_weight" float DEFAULT NULL, "o_weight" float DEFAULT NULL, "s_weight" float DEFAULT NULL, "c_weight" float DEFAULT NULL, "m_weight" float DEFAULT NULL, "t_weight" float DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "asurveys" ("id","name","user_type","created_at","updated_at","ar_l","fp","fo","fs","fc","fm","ft","rp","ro","rs","rc","rm","rt","po","ps","pc","pm","pt","os","oc","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight")
+                     SELECT "id","name","user_type","created_at","updated_at","fr","fp","fo","fs","fc","fm","ft","rp","ro","rs","rc","rm","rt","po","ps","pc","pm","pt","os","oc","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight" FROM "surveys"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "surveys"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "surveys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT NULL, "user_type" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "ar_l" float DEFAULT NULL, "fp" float DEFAULT NULL, "fo" float DEFAULT NULL, "fs" float DEFAULT NULL, "fc" float DEFAULT NULL, "fm" float DEFAULT NULL, "ft" float DEFAULT NULL, "rp" float DEFAULT NULL, "ro" float DEFAULT NULL, "rs" float DEFAULT NULL, "rc" float DEFAULT NULL, "rm" float DEFAULT NULL, "rt" float DEFAULT NULL, "po" float DEFAULT NULL, "ps" float DEFAULT NULL, "pc" float DEFAULT NULL, "pm" float DEFAULT NULL, "pt" float DEFAULT NULL, "os" float DEFAULT NULL, "oc" float DEFAULT NULL, "om" float DEFAULT NULL, "ot" float DEFAULT NULL, "sc" float DEFAULT NULL, "sm" float DEFAULT NULL, "st" float DEFAULT NULL, "cm" float DEFAULT NULL, "ct" float DEFAULT NULL, "mt" float DEFAULT NULL, "f_weight" float DEFAULT NULL, "r_weight" float DEFAULT NULL, "p_weight" float DEFAULT NULL, "o_weight" float DEFAULT NULL, "s_weight" float DEFAULT NULL, "c_weight" float DEFAULT NULL, "m_weight" float DEFAULT NULL, "t_weight" float DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "surveys" ("id","name","user_type","created_at","updated_at","ar_l","fp","fo","fs","fc","fm","ft","rp","ro","rs","rc","rm","rt","po","ps","pc","pm","pt","os","oc","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight")
+                     SELECT "id","name","user_type","created_at","updated_at","ar_l","fp","fo","fs","fc","fm","ft","rp","ro","rs","rc","rm","rt","po","ps","pc","pm","pt","os","oc","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight" FROM "asurveys"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "asurveys"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TEMPORARY TABLE "asurveys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT NULL, "user_type" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "ar_l" float DEFAULT NULL, "ar_o" float DEFAULT NULL, "fo" float DEFAULT NULL, "fs" float DEFAULT NULL, "fc" float DEFAULT NULL, "fm" float DEFAULT NULL, "ft" float DEFAULT NULL, "rp" float DEFAULT NULL, "ro" float DEFAULT NULL, "rs" float DEFAULT NULL, "rc" float DEFAULT NULL, "rm" float DEFAULT NULL, "rt" float DEFAULT NULL, "po" float DEFAULT NULL, "ps" float DEFAULT NULL, "pc" float DEFAULT NULL, "pm" float DEFAULT NULL, "pt" float DEFAULT NULL, "os" float DEFAULT NULL, "oc" float DEFAULT NULL, "om" float DEFAULT NULL, "ot" float DEFAULT NULL, "sc" float DEFAULT NULL, "sm" float DEFAULT NULL, "st" float DEFAULT NULL, "cm" float DEFAULT NULL, "ct" float DEFAULT NULL, "mt" float DEFAULT NULL, "f_weight" float DEFAULT NULL, "r_weight" float DEFAULT NULL, "p_weight" float DEFAULT NULL, "o_weight" float DEFAULT NULL, "s_weight" float DEFAULT NULL, "c_weight" float DEFAULT NULL, "m_weight" float DEFAULT NULL, "t_weight" float DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "asurveys" ("id","name","user_type","created_at","updated_at","ar_l","ar_o","fo","fs","fc","fm","ft","rp","ro","rs","rc","rm","rt","po","ps","pc","pm","pt","os","oc","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight")
+                     SELECT "id","name","user_type","created_at","updated_at","ar_l","fp","fo","fs","fc","fm","ft","rp","ro","rs","rc","rm","rt","po","ps","pc","pm","pt","os","oc","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight" FROM "surveys"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "surveys"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "surveys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT NULL, "user_type" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "ar_l" float DEFAULT NULL, "ar_o" float DEFAULT NULL, "fo" float DEFAULT NULL, "fs" float DEFAULT NULL, "fc" float DEFAULT NULL, "fm" float DEFAULT NULL, "ft" float DEFAULT NULL, "rp" float DEFAULT NULL, "ro" float DEFAULT NULL, "rs" float DEFAULT NULL, "rc" float DEFAULT NULL, "rm" float DEFAULT NULL, "rt" float DEFAULT NULL, "po" float DEFAULT NULL, "ps" float DEFAULT NULL, "pc" float DEFAULT NULL, "pm" float DEFAULT NULL, "pt" float DEFAULT NULL, "os" float DEFAULT NULL, "oc" float DEFAULT NULL, "om" float DEFAULT NULL, "ot" float DEFAULT NULL, "sc" float DEFAULT NULL, "sm" float DEFAULT NULL, "st" float DEFAULT NULL, "cm" float DEFAULT NULL, "ct" float DEFAULT NULL, "mt" float DEFAULT NULL, "f_weight" float DEFAULT NULL, "r_weight" float DEFAULT NULL, "p_weight" float DEFAULT NULL, "o_weight" float DEFAULT NULL, "s_weight" float DEFAULT NULL, "c_weight" float DEFAULT NULL, "m_weight" float DEFAULT NULL, "t_weight" float DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "surveys" ("id","name","user_type","created_at","updated_at","ar_l","ar_o","fo","fs","fc","fm","ft","rp","ro","rs","rc","rm","rt","po","ps","pc","pm","pt","os","oc","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight")
+                     SELECT "id","name","user_type","created_at","updated_at","ar_l","ar_o","fo","fs","fc","fm","ft","rp","ro","rs","rc","rm","rt","po","ps","pc","pm","pt","os","oc","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight" FROM "asurveys"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "asurveys"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "asurveys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT NULL, "user_type" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "ar_l" float DEFAULT NULL, "ar_o" float DEFAULT NULL, "ar_uep" float DEFAULT NULL, "fs" float DEFAULT NULL, "fc" float DEFAULT NULL, "fm" float DEFAULT NULL, "ft" float DEFAULT NULL, "rp" float DEFAULT NULL, "ro" float DEFAULT NULL, "rs" float DEFAULT NULL, "rc" float DEFAULT NULL, "rm" float DEFAULT NULL, "rt" float DEFAULT NULL, "po" float DEFAULT NULL, "ps" float DEFAULT NULL, "pc" float DEFAULT NULL, "pm" float DEFAULT NULL, "pt" float DEFAULT NULL, "os" float DEFAULT NULL, "oc" float DEFAULT NULL, "om" float DEFAULT NULL, "ot" float DEFAULT NULL, "sc" float DEFAULT NULL, "sm" float DEFAULT NULL, "st" float DEFAULT NULL, "cm" float DEFAULT NULL, "ct" float DEFAULT NULL, "mt" float DEFAULT NULL, "f_weight" float DEFAULT NULL, "r_weight" float DEFAULT NULL, "p_weight" float DEFAULT NULL, "o_weight" float DEFAULT NULL, "s_weight" float DEFAULT NULL, "c_weight" float DEFAULT NULL, "m_weight" float DEFAULT NULL, "t_weight" float DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "asurveys" ("id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","fs","fc","fm","ft","rp","ro","rs","rc","rm","rt","po","ps","pc","pm","pt","os","oc","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight")
+                     SELECT "id","name","user_type","created_at","updated_at","ar_l","ar_o","fo","fs","fc","fm","ft","rp","ro","rs","rc","rm","rt","po","ps","pc","pm","pt","os","oc","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight" FROM "surveys"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "surveys"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "surveys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT NULL, "user_type" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "ar_l" float DEFAULT NULL, "ar_o" float DEFAULT NULL, "ar_uep" float DEFAULT NULL, "fs" float DEFAULT NULL, "fc" float DEFAULT NULL, "fm" float DEFAULT NULL, "ft" float DEFAULT NULL, "rp" float DEFAULT NULL, "ro" float DEFAULT NULL, "rs" float DEFAULT NULL, "rc" float DEFAULT NULL, "rm" float DEFAULT NULL, "rt" float DEFAULT NULL, "po" float DEFAULT NULL, "ps" float DEFAULT NULL, "pc" float DEFAULT NULL, "pm" float DEFAULT NULL, "pt" float DEFAULT NULL, "os" float DEFAULT NULL, "oc" float DEFAULT NULL, "om" float DEFAULT NULL, "ot" float DEFAULT NULL, "sc" float DEFAULT NULL, "sm" float DEFAULT NULL, "st" float DEFAULT NULL, "cm" float DEFAULT NULL, "ct" float DEFAULT NULL, "mt" float DEFAULT NULL, "f_weight" float DEFAULT NULL, "r_weight" float DEFAULT NULL, "p_weight" float DEFAULT NULL, "o_weight" float DEFAULT NULL, "s_weight" float DEFAULT NULL, "c_weight" float DEFAULT NULL, "m_weight" float DEFAULT NULL, "t_weight" float DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "surveys" ("id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","fs","fc","fm","ft","rp","ro","rs","rc","rm","rt","po","ps","pc","pm","pt","os","oc","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight")
+                     SELECT "id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","fs","fc","fm","ft","rp","ro","rs","rc","rm","rt","po","ps","pc","pm","pt","os","oc","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight" FROM "asurveys"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "asurveys"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "asurveys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT NULL, "user_type" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "ar_l" float DEFAULT NULL, "ar_o" float DEFAULT NULL, "ar_uep" float DEFAULT NULL, "ar_uia" float DEFAULT NULL, "fc" float DEFAULT NULL, "fm" float DEFAULT NULL, "ft" float DEFAULT NULL, "rp" float DEFAULT NULL, "ro" float DEFAULT NULL, "rs" float DEFAULT NULL, "rc" float DEFAULT NULL, "rm" float DEFAULT NULL, "rt" float DEFAULT NULL, "po" float DEFAULT NULL, "ps" float DEFAULT NULL, "pc" float DEFAULT NULL, "pm" float DEFAULT NULL, "pt" float DEFAULT NULL, "os" float DEFAULT NULL, "oc" float DEFAULT NULL, "om" float DEFAULT NULL, "ot" float DEFAULT NULL, "sc" float DEFAULT NULL, "sm" float DEFAULT NULL, "st" float DEFAULT NULL, "cm" float DEFAULT NULL, "ct" float DEFAULT NULL, "mt" float DEFAULT NULL, "f_weight" float DEFAULT NULL, "r_weight" float DEFAULT NULL, "p_weight" float DEFAULT NULL, "o_weight" float DEFAULT NULL, "s_weight" float DEFAULT NULL, "c_weight" float DEFAULT NULL, "m_weight" float DEFAULT NULL, "t_weight" float DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "asurveys" ("id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","fc","fm","ft","rp","ro","rs","rc","rm","rt","po","ps","pc","pm","pt","os","oc","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight")
+                     SELECT "id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","fs","fc","fm","ft","rp","ro","rs","rc","rm","rt","po","ps","pc","pm","pt","os","oc","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight" FROM "surveys"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "surveys"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "surveys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT NULL, "user_type" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "ar_l" float DEFAULT NULL, "ar_o" float DEFAULT NULL, "ar_uep" float DEFAULT NULL, "ar_uia" float DEFAULT NULL, "fc" float DEFAULT NULL, "fm" float DEFAULT NULL, "ft" float DEFAULT NULL, "rp" float DEFAULT NULL, "ro" float DEFAULT NULL, "rs" float DEFAULT NULL, "rc" float DEFAULT NULL, "rm" float DEFAULT NULL, "rt" float DEFAULT NULL, "po" float DEFAULT NULL, "ps" float DEFAULT NULL, "pc" float DEFAULT NULL, "pm" float DEFAULT NULL, "pt" float DEFAULT NULL, "os" float DEFAULT NULL, "oc" float DEFAULT NULL, "om" float DEFAULT NULL, "ot" float DEFAULT NULL, "sc" float DEFAULT NULL, "sm" float DEFAULT NULL, "st" float DEFAULT NULL, "cm" float DEFAULT NULL, "ct" float DEFAULT NULL, "mt" float DEFAULT NULL, "f_weight" float DEFAULT NULL, "r_weight" float DEFAULT NULL, "p_weight" float DEFAULT NULL, "o_weight" float DEFAULT NULL, "s_weight" float DEFAULT NULL, "c_weight" float DEFAULT NULL, "m_weight" float DEFAULT NULL, "t_weight" float DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "surveys" ("id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","fc","fm","ft","rp","ro","rs","rc","rm","rt","po","ps","pc","pm","pt","os","oc","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight")
+                     SELECT "id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","fc","fm","ft","rp","ro","rs","rc","rm","rt","po","ps","pc","pm","pt","os","oc","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight" FROM "asurveys"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "asurveys"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TEMPORARY TABLE "asurveys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT NULL, "user_type" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "ar_l" float DEFAULT NULL, "ar_o" float DEFAULT NULL, "ar_uep" float DEFAULT NULL, "ar_uia" float DEFAULT NULL, "ar_a" float DEFAULT NULL, "fm" float DEFAULT NULL, "ft" float DEFAULT NULL, "rp" float DEFAULT NULL, "ro" float DEFAULT NULL, "rs" float DEFAULT NULL, "rc" float DEFAULT NULL, "rm" float DEFAULT NULL, "rt" float DEFAULT NULL, "po" float DEFAULT NULL, "ps" float DEFAULT NULL, "pc" float DEFAULT NULL, "pm" float DEFAULT NULL, "pt" float DEFAULT NULL, "os" float DEFAULT NULL, "oc" float DEFAULT NULL, "om" float DEFAULT NULL, "ot" float DEFAULT NULL, "sc" float DEFAULT NULL, "sm" float DEFAULT NULL, "st" float DEFAULT NULL, "cm" float DEFAULT NULL, "ct" float DEFAULT NULL, "mt" float DEFAULT NULL, "f_weight" float DEFAULT NULL, "r_weight" float DEFAULT NULL, "p_weight" float DEFAULT NULL, "o_weight" float DEFAULT NULL, "s_weight" float DEFAULT NULL, "c_weight" float DEFAULT NULL, "m_weight" float DEFAULT NULL, "t_weight" float DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "asurveys" ("id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","fm","ft","rp","ro","rs","rc","rm","rt","po","ps","pc","pm","pt","os","oc","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight")
+                     SELECT "id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","fc","fm","ft","rp","ro","rs","rc","rm","rt","po","ps","pc","pm","pt","os","oc","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight" FROM "surveys"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "surveys"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "surveys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT NULL, "user_type" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "ar_l" float DEFAULT NULL, "ar_o" float DEFAULT NULL, "ar_uep" float DEFAULT NULL, "ar_uia" float DEFAULT NULL, "ar_a" float DEFAULT NULL, "fm" float DEFAULT NULL, "ft" float DEFAULT NULL, "rp" float DEFAULT NULL, "ro" float DEFAULT NULL, "rs" float DEFAULT NULL, "rc" float DEFAULT NULL, "rm" float DEFAULT NULL, "rt" float DEFAULT NULL, "po" float DEFAULT NULL, "ps" float DEFAULT NULL, "pc" float DEFAULT NULL, "pm" float DEFAULT NULL, "pt" float DEFAULT NULL, "os" float DEFAULT NULL, "oc" float DEFAULT NULL, "om" float DEFAULT NULL, "ot" float DEFAULT NULL, "sc" float DEFAULT NULL, "sm" float DEFAULT NULL, "st" float DEFAULT NULL, "cm" float DEFAULT NULL, "ct" float DEFAULT NULL, "mt" float DEFAULT NULL, "f_weight" float DEFAULT NULL, "r_weight" float DEFAULT NULL, "p_weight" float DEFAULT NULL, "o_weight" float DEFAULT NULL, "s_weight" float DEFAULT NULL, "c_weight" float DEFAULT NULL, "m_weight" float DEFAULT NULL, "t_weight" float DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "surveys" ("id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","fm","ft","rp","ro","rs","rc","rm","rt","po","ps","pc","pm","pt","os","oc","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight")
+                     SELECT "id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","fm","ft","rp","ro","rs","rc","rm","rt","po","ps","pc","pm","pt","os","oc","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight" FROM "asurveys"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "asurveys"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "asurveys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT NULL, "user_type" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "ar_l" float DEFAULT NULL, "ar_o" float DEFAULT NULL, "ar_uep" float DEFAULT NULL, "ar_uia" float DEFAULT NULL, "ar_a" float DEFAULT NULL, "l_o" float DEFAULT NULL, "ft" float DEFAULT NULL, "rp" float DEFAULT NULL, "ro" float DEFAULT NULL, "rs" float DEFAULT NULL, "rc" float DEFAULT NULL, "rm" float DEFAULT NULL, "rt" float DEFAULT NULL, "po" float DEFAULT NULL, "ps" float DEFAULT NULL, "pc" float DEFAULT NULL, "pm" float DEFAULT NULL, "pt" float DEFAULT NULL, "os" float DEFAULT NULL, "oc" float DEFAULT NULL, "om" float DEFAULT NULL, "ot" float DEFAULT NULL, "sc" float DEFAULT NULL, "sm" float DEFAULT NULL, "st" float DEFAULT NULL, "cm" float DEFAULT NULL, "ct" float DEFAULT NULL, "mt" float DEFAULT NULL, "f_weight" float DEFAULT NULL, "r_weight" float DEFAULT NULL, "p_weight" float DEFAULT NULL, "o_weight" float DEFAULT NULL, "s_weight" float DEFAULT NULL, "c_weight" float DEFAULT NULL, "m_weight" float DEFAULT NULL, "t_weight" float DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "asurveys" ("id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","ft","rp","ro","rs","rc","rm","rt","po","ps","pc","pm","pt","os","oc","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight")
+                     SELECT "id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","fm","ft","rp","ro","rs","rc","rm","rt","po","ps","pc","pm","pt","os","oc","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight" FROM "surveys"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "surveys"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "surveys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT NULL, "user_type" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "ar_l" float DEFAULT NULL, "ar_o" float DEFAULT NULL, "ar_uep" float DEFAULT NULL, "ar_uia" float DEFAULT NULL, "ar_a" float DEFAULT NULL, "l_o" float DEFAULT NULL, "ft" float DEFAULT NULL, "rp" float DEFAULT NULL, "ro" float DEFAULT NULL, "rs" float DEFAULT NULL, "rc" float DEFAULT NULL, "rm" float DEFAULT NULL, "rt" float DEFAULT NULL, "po" float DEFAULT NULL, "ps" float DEFAULT NULL, "pc" float DEFAULT NULL, "pm" float DEFAULT NULL, "pt" float DEFAULT NULL, "os" float DEFAULT NULL, "oc" float DEFAULT NULL, "om" float DEFAULT NULL, "ot" float DEFAULT NULL, "sc" float DEFAULT NULL, "sm" float DEFAULT NULL, "st" float DEFAULT NULL, "cm" float DEFAULT NULL, "ct" float DEFAULT NULL, "mt" float DEFAULT NULL, "f_weight" float DEFAULT NULL, "r_weight" float DEFAULT NULL, "p_weight" float DEFAULT NULL, "o_weight" float DEFAULT NULL, "s_weight" float DEFAULT NULL, "c_weight" float DEFAULT NULL, "m_weight" float DEFAULT NULL, "t_weight" float DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "surveys" ("id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","ft","rp","ro","rs","rc","rm","rt","po","ps","pc","pm","pt","os","oc","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight")
+                     SELECT "id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","ft","rp","ro","rs","rc","rm","rt","po","ps","pc","pm","pt","os","oc","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight" FROM "asurveys"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "asurveys"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "asurveys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT NULL, "user_type" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "ar_l" float DEFAULT NULL, "ar_o" float DEFAULT NULL, "ar_uep" float DEFAULT NULL, "ar_uia" float DEFAULT NULL, "ar_a" float DEFAULT NULL, "l_o" float DEFAULT NULL, "l_uep" float DEFAULT NULL, "rp" float DEFAULT NULL, "ro" float DEFAULT NULL, "rs" float DEFAULT NULL, "rc" float DEFAULT NULL, "rm" float DEFAULT NULL, "rt" float DEFAULT NULL, "po" float DEFAULT NULL, "ps" float DEFAULT NULL, "pc" float DEFAULT NULL, "pm" float DEFAULT NULL, "pt" float DEFAULT NULL, "os" float DEFAULT NULL, "oc" float DEFAULT NULL, "om" float DEFAULT NULL, "ot" float DEFAULT NULL, "sc" float DEFAULT NULL, "sm" float DEFAULT NULL, "st" float DEFAULT NULL, "cm" float DEFAULT NULL, "ct" float DEFAULT NULL, "mt" float DEFAULT NULL, "f_weight" float DEFAULT NULL, "r_weight" float DEFAULT NULL, "p_weight" float DEFAULT NULL, "o_weight" float DEFAULT NULL, "s_weight" float DEFAULT NULL, "c_weight" float DEFAULT NULL, "m_weight" float DEFAULT NULL, "t_weight" float DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "asurveys" ("id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","rp","ro","rs","rc","rm","rt","po","ps","pc","pm","pt","os","oc","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight")
+                     SELECT "id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","ft","rp","ro","rs","rc","rm","rt","po","ps","pc","pm","pt","os","oc","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight" FROM "surveys"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "surveys"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "surveys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT NULL, "user_type" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "ar_l" float DEFAULT NULL, "ar_o" float DEFAULT NULL, "ar_uep" float DEFAULT NULL, "ar_uia" float DEFAULT NULL, "ar_a" float DEFAULT NULL, "l_o" float DEFAULT NULL, "l_uep" float DEFAULT NULL, "rp" float DEFAULT NULL, "ro" float DEFAULT NULL, "rs" float DEFAULT NULL, "rc" float DEFAULT NULL, "rm" float DEFAULT NULL, "rt" float DEFAULT NULL, "po" float DEFAULT NULL, "ps" float DEFAULT NULL, "pc" float DEFAULT NULL, "pm" float DEFAULT NULL, "pt" float DEFAULT NULL, "os" float DEFAULT NULL, "oc" float DEFAULT NULL, "om" float DEFAULT NULL, "ot" float DEFAULT NULL, "sc" float DEFAULT NULL, "sm" float DEFAULT NULL, "st" float DEFAULT NULL, "cm" float DEFAULT NULL, "ct" float DEFAULT NULL, "mt" float DEFAULT NULL, "f_weight" float DEFAULT NULL, "r_weight" float DEFAULT NULL, "p_weight" float DEFAULT NULL, "o_weight" float DEFAULT NULL, "s_weight" float DEFAULT NULL, "c_weight" float DEFAULT NULL, "m_weight" float DEFAULT NULL, "t_weight" float DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "surveys" ("id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","rp","ro","rs","rc","rm","rt","po","ps","pc","pm","pt","os","oc","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight")
+                     SELECT "id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","rp","ro","rs","rc","rm","rt","po","ps","pc","pm","pt","os","oc","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight" FROM "asurveys"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "asurveys"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TEMPORARY TABLE "asurveys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT NULL, "user_type" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "ar_l" float DEFAULT NULL, "ar_o" float DEFAULT NULL, "ar_uep" float DEFAULT NULL, "ar_uia" float DEFAULT NULL, "ar_a" float DEFAULT NULL, "l_o" float DEFAULT NULL, "l_uep" float DEFAULT NULL, "l_uia" float DEFAULT NULL, "ro" float DEFAULT NULL, "rs" float DEFAULT NULL, "rc" float DEFAULT NULL, "rm" float DEFAULT NULL, "rt" float DEFAULT NULL, "po" float DEFAULT NULL, "ps" float DEFAULT NULL, "pc" float DEFAULT NULL, "pm" float DEFAULT NULL, "pt" float DEFAULT NULL, "os" float DEFAULT NULL, "oc" float DEFAULT NULL, "om" float DEFAULT NULL, "ot" float DEFAULT NULL, "sc" float DEFAULT NULL, "sm" float DEFAULT NULL, "st" float DEFAULT NULL, "cm" float DEFAULT NULL, "ct" float DEFAULT NULL, "mt" float DEFAULT NULL, "f_weight" float DEFAULT NULL, "r_weight" float DEFAULT NULL, "p_weight" float DEFAULT NULL, "o_weight" float DEFAULT NULL, "s_weight" float DEFAULT NULL, "c_weight" float DEFAULT NULL, "m_weight" float DEFAULT NULL, "t_weight" float DEFAULT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "asurveys" ("id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","ro","rs","rc","rm","rt","po","ps","pc","pm","pt","os","oc","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight")
+                     SELECT "id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","rp","ro","rs","rc","rm","rt","po","ps","pc","pm","pt","os","oc","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight" FROM "surveys"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "surveys"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "surveys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT NULL, "user_type" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "ar_l" float DEFAULT NULL, "ar_o" float DEFAULT NULL, "ar_uep" float DEFAULT NULL, "ar_uia" float DEFAULT NULL, "ar_a" float DEFAULT NULL, "l_o" float DEFAULT NULL, "l_uep" float DEFAULT NULL, "l_uia" float DEFAULT NULL, "ro" float DEFAULT NULL, "rs" float DEFAULT NULL, "rc" float DEFAULT NULL, "rm" float DEFAULT NULL, "rt" float DEFAULT NULL, "po" float DEFAULT NULL, "ps" float DEFAULT NULL, "pc" float DEFAULT NULL, "pm" float DEFAULT NULL, "pt" float DEFAULT NULL, "os" float DEFAULT NULL, "oc" float DEFAULT NULL, "om" float DEFAULT NULL, "ot" float DEFAULT NULL, "sc" float DEFAULT NULL, "sm" float DEFAULT NULL, "st" float DEFAULT NULL, "cm" float DEFAULT NULL, "ct" float DEFAULT NULL, "mt" float DEFAULT NULL, "f_weight" float DEFAULT NULL, "r_weight" float DEFAULT NULL, "p_weight" float DEFAULT NULL, "o_weight" float DEFAULT NULL, "s_weight" float DEFAULT NULL, "c_weight" float DEFAULT NULL, "m_weight" float DEFAULT NULL, "t_weight" float DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "surveys" ("id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","ro","rs","rc","rm","rt","po","ps","pc","pm","pt","os","oc","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight")
+                     SELECT "id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","ro","rs","rc","rm","rt","po","ps","pc","pm","pt","os","oc","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight" FROM "asurveys"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "asurveys"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TEMPORARY TABLE "asurveys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT NULL, "user_type" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "ar_l" float DEFAULT NULL, "ar_o" float DEFAULT NULL, "ar_uep" float DEFAULT NULL, "ar_uia" float DEFAULT NULL, "ar_a" float DEFAULT NULL, "l_o" float DEFAULT NULL, "l_uep" float DEFAULT NULL, "l_uia" float DEFAULT NULL, "l_a" float DEFAULT NULL, "rs" float DEFAULT NULL, "rc" float DEFAULT NULL, "rm" float DEFAULT NULL, "rt" float DEFAULT NULL, "po" float DEFAULT NULL, "ps" float DEFAULT NULL, "pc" float DEFAULT NULL, "pm" float DEFAULT NULL, "pt" float DEFAULT NULL, "os" float DEFAULT NULL, "oc" float DEFAULT NULL, "om" float DEFAULT NULL, "ot" float DEFAULT NULL, "sc" float DEFAULT NULL, "sm" float DEFAULT NULL, "st" float DEFAULT NULL, "cm" float DEFAULT NULL, "ct" float DEFAULT NULL, "mt" float DEFAULT NULL, "f_weight" float DEFAULT NULL, "r_weight" float DEFAULT NULL, "p_weight" float DEFAULT NULL, "o_weight" float DEFAULT NULL, "s_weight" float DEFAULT NULL, "c_weight" float DEFAULT NULL, "m_weight" float DEFAULT NULL, "t_weight" float DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "asurveys" ("id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","rs","rc","rm","rt","po","ps","pc","pm","pt","os","oc","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight")
+                     SELECT "id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","ro","rs","rc","rm","rt","po","ps","pc","pm","pt","os","oc","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight" FROM "surveys"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "surveys"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "surveys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT NULL, "user_type" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "ar_l" float DEFAULT NULL, "ar_o" float DEFAULT NULL, "ar_uep" float DEFAULT NULL, "ar_uia" float DEFAULT NULL, "ar_a" float DEFAULT NULL, "l_o" float DEFAULT NULL, "l_uep" float DEFAULT NULL, "l_uia" float DEFAULT NULL, "l_a" float DEFAULT NULL, "rs" float DEFAULT NULL, "rc" float DEFAULT NULL, "rm" float DEFAULT NULL, "rt" float DEFAULT NULL, "po" float DEFAULT NULL, "ps" float DEFAULT NULL, "pc" float DEFAULT NULL, "pm" float DEFAULT NULL, "pt" float DEFAULT NULL, "os" float DEFAULT NULL, "oc" float DEFAULT NULL, "om" float DEFAULT NULL, "ot" float DEFAULT NULL, "sc" float DEFAULT NULL, "sm" float DEFAULT NULL, "st" float DEFAULT NULL, "cm" float DEFAULT NULL, "ct" float DEFAULT NULL, "mt" float DEFAULT NULL, "f_weight" float DEFAULT NULL, "r_weight" float DEFAULT NULL, "p_weight" float DEFAULT NULL, "o_weight" float DEFAULT NULL, "s_weight" float DEFAULT NULL, "c_weight" float DEFAULT NULL, "m_weight" float DEFAULT NULL, "t_weight" float DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "surveys" ("id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","rs","rc","rm","rt","po","ps","pc","pm","pt","os","oc","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight")
+                     SELECT "id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","rs","rc","rm","rt","po","ps","pc","pm","pt","os","oc","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight" FROM "asurveys"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "asurveys"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TEMPORARY TABLE "asurveys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT NULL, "user_type" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "ar_l" float DEFAULT NULL, "ar_o" float DEFAULT NULL, "ar_uep" float DEFAULT NULL, "ar_uia" float DEFAULT NULL, "ar_a" float DEFAULT NULL, "l_o" float DEFAULT NULL, "l_uep" float DEFAULT NULL, "l_uia" float DEFAULT NULL, "l_a" float DEFAULT NULL, "o_uep" float DEFAULT NULL, "rc" float DEFAULT NULL, "rm" float DEFAULT NULL, "rt" float DEFAULT NULL, "po" float DEFAULT NULL, "ps" float DEFAULT NULL, "pc" float DEFAULT NULL, "pm" float DEFAULT NULL, "pt" float DEFAULT NULL, "os" float DEFAULT NULL, "oc" float DEFAULT NULL, "om" float DEFAULT NULL, "ot" float DEFAULT NULL, "sc" float DEFAULT NULL, "sm" float DEFAULT NULL, "st" float DEFAULT NULL, "cm" float DEFAULT NULL, "ct" float DEFAULT NULL, "mt" float DEFAULT NULL, "f_weight" float DEFAULT NULL, "r_weight" float DEFAULT NULL, "p_weight" float DEFAULT NULL, "o_weight" float DEFAULT NULL, "s_weight" float DEFAULT NULL, "c_weight" float DEFAULT NULL, "m_weight" float DEFAULT NULL, "t_weight" float DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "asurveys" ("id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","rc","rm","rt","po","ps","pc","pm","pt","os","oc","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight")
+                     SELECT "id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","rs","rc","rm","rt","po","ps","pc","pm","pt","os","oc","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight" FROM "surveys"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "surveys"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "surveys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT NULL, "user_type" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "ar_l" float DEFAULT NULL, "ar_o" float DEFAULT NULL, "ar_uep" float DEFAULT NULL, "ar_uia" float DEFAULT NULL, "ar_a" float DEFAULT NULL, "l_o" float DEFAULT NULL, "l_uep" float DEFAULT NULL, "l_uia" float DEFAULT NULL, "l_a" float DEFAULT NULL, "o_uep" float DEFAULT NULL, "rc" float DEFAULT NULL, "rm" float DEFAULT NULL, "rt" float DEFAULT NULL, "po" float DEFAULT NULL, "ps" float DEFAULT NULL, "pc" float DEFAULT NULL, "pm" float DEFAULT NULL, "pt" float DEFAULT NULL, "os" float DEFAULT NULL, "oc" float DEFAULT NULL, "om" float DEFAULT NULL, "ot" float DEFAULT NULL, "sc" float DEFAULT NULL, "sm" float DEFAULT NULL, "st" float DEFAULT NULL, "cm" float DEFAULT NULL, "ct" float DEFAULT NULL, "mt" float DEFAULT NULL, "f_weight" float DEFAULT NULL, "r_weight" float DEFAULT NULL, "p_weight" float DEFAULT NULL, "o_weight" float DEFAULT NULL, "s_weight" float DEFAULT NULL, "c_weight" float DEFAULT NULL, "m_weight" float DEFAULT NULL, "t_weight" float DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "surveys" ("id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","rc","rm","rt","po","ps","pc","pm","pt","os","oc","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight")
+                     SELECT "id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","rc","rm","rt","po","ps","pc","pm","pt","os","oc","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight" FROM "asurveys"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "asurveys"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "asurveys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT NULL, "user_type" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "ar_l" float DEFAULT NULL, "ar_o" float DEFAULT NULL, "ar_uep" float DEFAULT NULL, "ar_uia" float DEFAULT NULL, "ar_a" float DEFAULT NULL, "l_o" float DEFAULT NULL, "l_uep" float DEFAULT NULL, "l_uia" float DEFAULT NULL, "l_a" float DEFAULT NULL, "o_uep" float DEFAULT NULL, "o_uia" float DEFAULT NULL, "rm" float DEFAULT NULL, "rt" float DEFAULT NULL, "po" float DEFAULT NULL, "ps" float DEFAULT NULL, "pc" float DEFAULT NULL, "pm" float DEFAULT NULL, "pt" float DEFAULT NULL, "os" float DEFAULT NULL, "oc" float DEFAULT NULL, "om" float DEFAULT NULL, "ot" float DEFAULT NULL, "sc" float DEFAULT NULL, "sm" float DEFAULT NULL, "st" float DEFAULT NULL, "cm" float DEFAULT NULL, "ct" float DEFAULT NULL, "mt" float DEFAULT NULL, "f_weight" float DEFAULT NULL, "r_weight" float DEFAULT NULL, "p_weight" float DEFAULT NULL, "o_weight" float DEFAULT NULL, "s_weight" float DEFAULT NULL, "c_weight" float DEFAULT NULL, "m_weight" float DEFAULT NULL, "t_weight" float DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "asurveys" ("id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","o_uia","rm","rt","po","ps","pc","pm","pt","os","oc","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight")
+                     SELECT "id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","rc","rm","rt","po","ps","pc","pm","pt","os","oc","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight" FROM "surveys"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "surveys"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "surveys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT NULL, "user_type" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "ar_l" float DEFAULT NULL, "ar_o" float DEFAULT NULL, "ar_uep" float DEFAULT NULL, "ar_uia" float DEFAULT NULL, "ar_a" float DEFAULT NULL, "l_o" float DEFAULT NULL, "l_uep" float DEFAULT NULL, "l_uia" float DEFAULT NULL, "l_a" float DEFAULT NULL, "o_uep" float DEFAULT NULL, "o_uia" float DEFAULT NULL, "rm" float DEFAULT NULL, "rt" float DEFAULT NULL, "po" float DEFAULT NULL, "ps" float DEFAULT NULL, "pc" float DEFAULT NULL, "pm" float DEFAULT NULL, "pt" float DEFAULT NULL, "os" float DEFAULT NULL, "oc" float DEFAULT NULL, "om" float DEFAULT NULL, "ot" float DEFAULT NULL, "sc" float DEFAULT NULL, "sm" float DEFAULT NULL, "st" float DEFAULT NULL, "cm" float DEFAULT NULL, "ct" float DEFAULT NULL, "mt" float DEFAULT NULL, "f_weight" float DEFAULT NULL, "r_weight" float DEFAULT NULL, "p_weight" float DEFAULT NULL, "o_weight" float DEFAULT NULL, "s_weight" float DEFAULT NULL, "c_weight" float DEFAULT NULL, "m_weight" float DEFAULT NULL, "t_weight" float DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "surveys" ("id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","o_uia","rm","rt","po","ps","pc","pm","pt","os","oc","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight")
+                     SELECT "id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","o_uia","rm","rt","po","ps","pc","pm","pt","os","oc","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight" FROM "asurveys"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "asurveys"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "asurveys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT NULL, "user_type" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "ar_l" float DEFAULT NULL, "ar_o" float DEFAULT NULL, "ar_uep" float DEFAULT NULL, "ar_uia" float DEFAULT NULL, "ar_a" float DEFAULT NULL, "l_o" float DEFAULT NULL, "l_uep" float DEFAULT NULL, "l_uia" float DEFAULT NULL, "l_a" float DEFAULT NULL, "o_uep" float DEFAULT NULL, "o_uia" float DEFAULT NULL, "o_a" float DEFAULT NULL, "rt" float DEFAULT NULL, "po" float DEFAULT NULL, "ps" float DEFAULT NULL, "pc" float DEFAULT NULL, "pm" float DEFAULT NULL, "pt" float DEFAULT NULL, "os" float DEFAULT NULL, "oc" float DEFAULT NULL, "om" float DEFAULT NULL, "ot" float DEFAULT NULL, "sc" float DEFAULT NULL, "sm" float DEFAULT NULL, "st" float DEFAULT NULL, "cm" float DEFAULT NULL, "ct" float DEFAULT NULL, "mt" float DEFAULT NULL, "f_weight" float DEFAULT NULL, "r_weight" float DEFAULT NULL, "p_weight" float DEFAULT NULL, "o_weight" float DEFAULT NULL, "s_weight" float DEFAULT NULL, "c_weight" float DEFAULT NULL, "m_weight" float DEFAULT NULL, "t_weight" float DEFAULT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "asurveys" ("id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","o_uia","o_a","rt","po","ps","pc","pm","pt","os","oc","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight")
+                     SELECT "id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","o_uia","rm","rt","po","ps","pc","pm","pt","os","oc","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight" FROM "surveys"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "surveys"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "surveys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT NULL, "user_type" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "ar_l" float DEFAULT NULL, "ar_o" float DEFAULT NULL, "ar_uep" float DEFAULT NULL, "ar_uia" float DEFAULT NULL, "ar_a" float DEFAULT NULL, "l_o" float DEFAULT NULL, "l_uep" float DEFAULT NULL, "l_uia" float DEFAULT NULL, "l_a" float DEFAULT NULL, "o_uep" float DEFAULT NULL, "o_uia" float DEFAULT NULL, "o_a" float DEFAULT NULL, "rt" float DEFAULT NULL, "po" float DEFAULT NULL, "ps" float DEFAULT NULL, "pc" float DEFAULT NULL, "pm" float DEFAULT NULL, "pt" float DEFAULT NULL, "os" float DEFAULT NULL, "oc" float DEFAULT NULL, "om" float DEFAULT NULL, "ot" float DEFAULT NULL, "sc" float DEFAULT NULL, "sm" float DEFAULT NULL, "st" float DEFAULT NULL, "cm" float DEFAULT NULL, "ct" float DEFAULT NULL, "mt" float DEFAULT NULL, "f_weight" float DEFAULT NULL, "r_weight" float DEFAULT NULL, "p_weight" float DEFAULT NULL, "o_weight" float DEFAULT NULL, "s_weight" float DEFAULT NULL, "c_weight" float DEFAULT NULL, "m_weight" float DEFAULT NULL, "t_weight" float DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "surveys" ("id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","o_uia","o_a","rt","po","ps","pc","pm","pt","os","oc","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight")
+                     SELECT "id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","o_uia","o_a","rt","po","ps","pc","pm","pt","os","oc","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight" FROM "asurveys"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "asurveys"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TEMPORARY TABLE "asurveys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT NULL, "user_type" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "ar_l" float DEFAULT NULL, "ar_o" float DEFAULT NULL, "ar_uep" float DEFAULT NULL, "ar_uia" float DEFAULT NULL, "ar_a" float DEFAULT NULL, "l_o" float DEFAULT NULL, "l_uep" float DEFAULT NULL, "l_uia" float DEFAULT NULL, "l_a" float DEFAULT NULL, "o_uep" float DEFAULT NULL, "o_uia" float DEFAULT NULL, "o_a" float DEFAULT NULL, "uep_uia" float DEFAULT NULL, "po" float DEFAULT NULL, "ps" float DEFAULT NULL, "pc" float DEFAULT NULL, "pm" float DEFAULT NULL, "pt" float DEFAULT NULL, "os" float DEFAULT NULL, "oc" float DEFAULT NULL, "om" float DEFAULT NULL, "ot" float DEFAULT NULL, "sc" float DEFAULT NULL, "sm" float DEFAULT NULL, "st" float DEFAULT NULL, "cm" float DEFAULT NULL, "ct" float DEFAULT NULL, "mt" float DEFAULT NULL, "f_weight" float DEFAULT NULL, "r_weight" float DEFAULT NULL, "p_weight" float DEFAULT NULL, "o_weight" float DEFAULT NULL, "s_weight" float DEFAULT NULL, "c_weight" float DEFAULT NULL, "m_weight" float DEFAULT NULL, "t_weight" float DEFAULT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "asurveys" ("id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","o_uia","o_a","uep_uia","po","ps","pc","pm","pt","os","oc","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight")
+                     SELECT "id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","o_uia","o_a","rt","po","ps","pc","pm","pt","os","oc","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight" FROM "surveys"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "surveys"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "surveys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT NULL, "user_type" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "ar_l" float DEFAULT NULL, "ar_o" float DEFAULT NULL, "ar_uep" float DEFAULT NULL, "ar_uia" float DEFAULT NULL, "ar_a" float DEFAULT NULL, "l_o" float DEFAULT NULL, "l_uep" float DEFAULT NULL, "l_uia" float DEFAULT NULL, "l_a" float DEFAULT NULL, "o_uep" float DEFAULT NULL, "o_uia" float DEFAULT NULL, "o_a" float DEFAULT NULL, "uep_uia" float DEFAULT NULL, "po" float DEFAULT NULL, "ps" float DEFAULT NULL, "pc" float DEFAULT NULL, "pm" float DEFAULT NULL, "pt" float DEFAULT NULL, "os" float DEFAULT NULL, "oc" float DEFAULT NULL, "om" float DEFAULT NULL, "ot" float DEFAULT NULL, "sc" float DEFAULT NULL, "sm" float DEFAULT NULL, "st" float DEFAULT NULL, "cm" float DEFAULT NULL, "ct" float DEFAULT NULL, "mt" float DEFAULT NULL, "f_weight" float DEFAULT NULL, "r_weight" float DEFAULT NULL, "p_weight" float DEFAULT NULL, "o_weight" float DEFAULT NULL, "s_weight" float DEFAULT NULL, "c_weight" float DEFAULT NULL, "m_weight" float DEFAULT NULL, "t_weight" float DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "surveys" ("id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","o_uia","o_a","uep_uia","po","ps","pc","pm","pt","os","oc","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight")
+                     SELECT "id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","o_uia","o_a","uep_uia","po","ps","pc","pm","pt","os","oc","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight" FROM "asurveys"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "asurveys"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "asurveys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT NULL, "user_type" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "ar_l" float DEFAULT NULL, "ar_o" float DEFAULT NULL, "ar_uep" float DEFAULT NULL, "ar_uia" float DEFAULT NULL, "ar_a" float DEFAULT NULL, "l_o" float DEFAULT NULL, "l_uep" float DEFAULT NULL, "l_uia" float DEFAULT NULL, "l_a" float DEFAULT NULL, "o_uep" float DEFAULT NULL, "o_uia" float DEFAULT NULL, "o_a" float DEFAULT NULL, "uep_uia" float DEFAULT NULL, "uep_a" float DEFAULT NULL, "ps" float DEFAULT NULL, "pc" float DEFAULT NULL, "pm" float DEFAULT NULL, "pt" float DEFAULT NULL, "os" float DEFAULT NULL, "oc" float DEFAULT NULL, "om" float DEFAULT NULL, "ot" float DEFAULT NULL, "sc" float DEFAULT NULL, "sm" float DEFAULT NULL, "st" float DEFAULT NULL, "cm" float DEFAULT NULL, "ct" float DEFAULT NULL, "mt" float DEFAULT NULL, "f_weight" float DEFAULT NULL, "r_weight" float DEFAULT NULL, "p_weight" float DEFAULT NULL, "o_weight" float DEFAULT NULL, "s_weight" float DEFAULT NULL, "c_weight" float DEFAULT NULL, "m_weight" float DEFAULT NULL, "t_weight" float DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "asurveys" ("id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","o_uia","o_a","uep_uia","uep_a","ps","pc","pm","pt","os","oc","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight")
+                     SELECT "id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","o_uia","o_a","uep_uia","po","ps","pc","pm","pt","os","oc","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight" FROM "surveys"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "surveys"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "surveys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT NULL, "user_type" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "ar_l" float DEFAULT NULL, "ar_o" float DEFAULT NULL, "ar_uep" float DEFAULT NULL, "ar_uia" float DEFAULT NULL, "ar_a" float DEFAULT NULL, "l_o" float DEFAULT NULL, "l_uep" float DEFAULT NULL, "l_uia" float DEFAULT NULL, "l_a" float DEFAULT NULL, "o_uep" float DEFAULT NULL, "o_uia" float DEFAULT NULL, "o_a" float DEFAULT NULL, "uep_uia" float DEFAULT NULL, "uep_a" float DEFAULT NULL, "ps" float DEFAULT NULL, "pc" float DEFAULT NULL, "pm" float DEFAULT NULL, "pt" float DEFAULT NULL, "os" float DEFAULT NULL, "oc" float DEFAULT NULL, "om" float DEFAULT NULL, "ot" float DEFAULT NULL, "sc" float DEFAULT NULL, "sm" float DEFAULT NULL, "st" float DEFAULT NULL, "cm" float DEFAULT NULL, "ct" float DEFAULT NULL, "mt" float DEFAULT NULL, "f_weight" float DEFAULT NULL, "r_weight" float DEFAULT NULL, "p_weight" float DEFAULT NULL, "o_weight" float DEFAULT NULL, "s_weight" float DEFAULT NULL, "c_weight" float DEFAULT NULL, "m_weight" float DEFAULT NULL, "t_weight" float DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "surveys" ("id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","o_uia","o_a","uep_uia","uep_a","ps","pc","pm","pt","os","oc","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight")
+                     SELECT "id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","o_uia","o_a","uep_uia","uep_a","ps","pc","pm","pt","os","oc","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight" FROM "asurveys"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "asurveys"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "asurveys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT NULL, "user_type" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "ar_l" float DEFAULT NULL, "ar_o" float DEFAULT NULL, "ar_uep" float DEFAULT NULL, "ar_uia" float DEFAULT NULL, "ar_a" float DEFAULT NULL, "l_o" float DEFAULT NULL, "l_uep" float DEFAULT NULL, "l_uia" float DEFAULT NULL, "l_a" float DEFAULT NULL, "o_uep" float DEFAULT NULL, "o_uia" float DEFAULT NULL, "o_a" float DEFAULT NULL, "uep_uia" float DEFAULT NULL, "uep_a" float DEFAULT NULL, "uia_a" float DEFAULT NULL, "pc" float DEFAULT NULL, "pm" float DEFAULT NULL, "pt" float DEFAULT NULL, "os" float DEFAULT NULL, "oc" float DEFAULT NULL, "om" float DEFAULT NULL, "ot" float DEFAULT NULL, "sc" float DEFAULT NULL, "sm" float DEFAULT NULL, "st" float DEFAULT NULL, "cm" float DEFAULT NULL, "ct" float DEFAULT NULL, "mt" float DEFAULT NULL, "f_weight" float DEFAULT NULL, "r_weight" float DEFAULT NULL, "p_weight" float DEFAULT NULL, "o_weight" float DEFAULT NULL, "s_weight" float DEFAULT NULL, "c_weight" float DEFAULT NULL, "m_weight" float DEFAULT NULL, "t_weight" float DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "asurveys" ("id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","o_uia","o_a","uep_uia","uep_a","uia_a","pc","pm","pt","os","oc","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight")
+                     SELECT "id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","o_uia","o_a","uep_uia","uep_a","ps","pc","pm","pt","os","oc","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight" FROM "surveys"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "surveys"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "surveys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT NULL, "user_type" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "ar_l" float DEFAULT NULL, "ar_o" float DEFAULT NULL, "ar_uep" float DEFAULT NULL, "ar_uia" float DEFAULT NULL, "ar_a" float DEFAULT NULL, "l_o" float DEFAULT NULL, "l_uep" float DEFAULT NULL, "l_uia" float DEFAULT NULL, "l_a" float DEFAULT NULL, "o_uep" float DEFAULT NULL, "o_uia" float DEFAULT NULL, "o_a" float DEFAULT NULL, "uep_uia" float DEFAULT NULL, "uep_a" float DEFAULT NULL, "uia_a" float DEFAULT NULL, "pc" float DEFAULT NULL, "pm" float DEFAULT NULL, "pt" float DEFAULT NULL, "os" float DEFAULT NULL, "oc" float DEFAULT NULL, "om" float DEFAULT NULL, "ot" float DEFAULT NULL, "sc" float DEFAULT NULL, "sm" float DEFAULT NULL, "st" float DEFAULT NULL, "cm" float DEFAULT NULL, "ct" float DEFAULT NULL, "mt" float DEFAULT NULL, "f_weight" float DEFAULT NULL, "r_weight" float DEFAULT NULL, "p_weight" float DEFAULT NULL, "o_weight" float DEFAULT NULL, "s_weight" float DEFAULT NULL, "c_weight" float DEFAULT NULL, "m_weight" float DEFAULT NULL, "t_weight" float DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "surveys" ("id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","o_uia","o_a","uep_uia","uep_a","uia_a","pc","pm","pt","os","oc","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight")
+                     SELECT "id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","o_uia","o_a","uep_uia","uep_a","uia_a","pc","pm","pt","os","oc","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight" FROM "asurveys"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "asurveys"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TEMPORARY TABLE "asurveys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT NULL, "user_type" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "ar_l" float DEFAULT NULL, "ar_o" float DEFAULT NULL, "ar_uep" float DEFAULT NULL, "ar_uia" float DEFAULT NULL, "ar_a" float DEFAULT NULL, "l_o" float DEFAULT NULL, "l_uep" float DEFAULT NULL, "l_uia" float DEFAULT NULL, "l_a" float DEFAULT NULL, "o_uep" float DEFAULT NULL, "o_uia" float DEFAULT NULL, "o_a" float DEFAULT NULL, "uep_uia" float DEFAULT NULL, "uep_a" float DEFAULT NULL, "uia_a" float DEFAULT NULL, "pc" float DEFAULT NULL, "pm" float DEFAULT NULL, "pt" float DEFAULT NULL, "os" float DEFAULT NULL, "oc" float DEFAULT NULL, "om" float DEFAULT NULL, "ot" float DEFAULT NULL, "sc" float DEFAULT NULL, "sm" float DEFAULT NULL, "st" float DEFAULT NULL, "cm" float DEFAULT NULL, "ct" float DEFAULT NULL, "mt" float DEFAULT NULL, "f_weight" float DEFAULT NULL, "r_weight" float DEFAULT NULL, "p_weight" float DEFAULT NULL, "o_weight" float DEFAULT NULL, "s_weight" float DEFAULT NULL, "c_weight" float DEFAULT NULL, "m_weight" float DEFAULT NULL, "t_weight" float DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "asurveys" ("id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","o_uia","o_a","uep_uia","uep_a","uia_a","pc","pm","pt","os","oc","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight")
+                     SELECT "id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","o_uia","o_a","uep_uia","uep_a","uia_a","pc","pm","pt","os","oc","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight" FROM "surveys"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "surveys"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "surveys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT NULL, "user_type" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "ar_l" float DEFAULT NULL, "ar_o" float DEFAULT NULL, "ar_uep" float DEFAULT NULL, "ar_uia" float DEFAULT NULL, "ar_a" float DEFAULT NULL, "l_o" float DEFAULT NULL, "l_uep" float DEFAULT NULL, "l_uia" float DEFAULT NULL, "l_a" float DEFAULT NULL, "o_uep" float DEFAULT NULL, "o_uia" float DEFAULT NULL, "o_a" float DEFAULT NULL, "uep_uia" float DEFAULT NULL, "uep_a" float DEFAULT NULL, "uia_a" float DEFAULT NULL, "pm" float DEFAULT NULL, "pt" float DEFAULT NULL, "os" float DEFAULT NULL, "oc" float DEFAULT NULL, "om" float DEFAULT NULL, "ot" float DEFAULT NULL, "sc" float DEFAULT NULL, "sm" float DEFAULT NULL, "st" float DEFAULT NULL, "cm" float DEFAULT NULL, "ct" float DEFAULT NULL, "mt" float DEFAULT NULL, "f_weight" float DEFAULT NULL, "r_weight" float DEFAULT NULL, "p_weight" float DEFAULT NULL, "o_weight" float DEFAULT NULL, "s_weight" float DEFAULT NULL, "c_weight" float DEFAULT NULL, "m_weight" float DEFAULT NULL, "t_weight" float DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "surveys" ("id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","o_uia","o_a","uep_uia","uep_a","uia_a","pm","pt","os","oc","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight")
+                     SELECT "id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","o_uia","o_a","uep_uia","uep_a","uia_a","pm","pt","os","oc","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight" FROM "asurveys"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "asurveys"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "asurveys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT NULL, "user_type" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "ar_l" float DEFAULT NULL, "ar_o" float DEFAULT NULL, "ar_uep" float DEFAULT NULL, "ar_uia" float DEFAULT NULL, "ar_a" float DEFAULT NULL, "l_o" float DEFAULT NULL, "l_uep" float DEFAULT NULL, "l_uia" float DEFAULT NULL, "l_a" float DEFAULT NULL, "o_uep" float DEFAULT NULL, "o_uia" float DEFAULT NULL, "o_a" float DEFAULT NULL, "uep_uia" float DEFAULT NULL, "uep_a" float DEFAULT NULL, "uia_a" float DEFAULT NULL, "pm" float DEFAULT NULL, "pt" float DEFAULT NULL, "os" float DEFAULT NULL, "oc" float DEFAULT NULL, "om" float DEFAULT NULL, "ot" float DEFAULT NULL, "sc" float DEFAULT NULL, "sm" float DEFAULT NULL, "st" float DEFAULT NULL, "cm" float DEFAULT NULL, "ct" float DEFAULT NULL, "mt" float DEFAULT NULL, "f_weight" float DEFAULT NULL, "r_weight" float DEFAULT NULL, "p_weight" float DEFAULT NULL, "o_weight" float DEFAULT NULL, "s_weight" float DEFAULT NULL, "c_weight" float DEFAULT NULL, "m_weight" float DEFAULT NULL, "t_weight" float DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "asurveys" ("id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","o_uia","o_a","uep_uia","uep_a","uia_a","pm","pt","os","oc","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight")
+                     SELECT "id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","o_uia","o_a","uep_uia","uep_a","uia_a","pm","pt","os","oc","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight" FROM "surveys"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "surveys"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "surveys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT NULL, "user_type" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "ar_l" float DEFAULT NULL, "ar_o" float DEFAULT NULL, "ar_uep" float DEFAULT NULL, "ar_uia" float DEFAULT NULL, "ar_a" float DEFAULT NULL, "l_o" float DEFAULT NULL, "l_uep" float DEFAULT NULL, "l_uia" float DEFAULT NULL, "l_a" float DEFAULT NULL, "o_uep" float DEFAULT NULL, "o_uia" float DEFAULT NULL, "o_a" float DEFAULT NULL, "uep_uia" float DEFAULT NULL, "uep_a" float DEFAULT NULL, "uia_a" float DEFAULT NULL, "pt" float DEFAULT NULL, "os" float DEFAULT NULL, "oc" float DEFAULT NULL, "om" float DEFAULT NULL, "ot" float DEFAULT NULL, "sc" float DEFAULT NULL, "sm" float DEFAULT NULL, "st" float DEFAULT NULL, "cm" float DEFAULT NULL, "ct" float DEFAULT NULL, "mt" float DEFAULT NULL, "f_weight" float DEFAULT NULL, "r_weight" float DEFAULT NULL, "p_weight" float DEFAULT NULL, "o_weight" float DEFAULT NULL, "s_weight" float DEFAULT NULL, "c_weight" float DEFAULT NULL, "m_weight" float DEFAULT NULL, "t_weight" float DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "surveys" ("id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","o_uia","o_a","uep_uia","uep_a","uia_a","pt","os","oc","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight")
+                     SELECT "id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","o_uia","o_a","uep_uia","uep_a","uia_a","pt","os","oc","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight" FROM "asurveys"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "asurveys"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "asurveys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT NULL, "user_type" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "ar_l" float DEFAULT NULL, "ar_o" float DEFAULT NULL, "ar_uep" float DEFAULT NULL, "ar_uia" float DEFAULT NULL, "ar_a" float DEFAULT NULL, "l_o" float DEFAULT NULL, "l_uep" float DEFAULT NULL, "l_uia" float DEFAULT NULL, "l_a" float DEFAULT NULL, "o_uep" float DEFAULT NULL, "o_uia" float DEFAULT NULL, "o_a" float DEFAULT NULL, "uep_uia" float DEFAULT NULL, "uep_a" float DEFAULT NULL, "uia_a" float DEFAULT NULL, "pt" float DEFAULT NULL, "os" float DEFAULT NULL, "oc" float DEFAULT NULL, "om" float DEFAULT NULL, "ot" float DEFAULT NULL, "sc" float DEFAULT NULL, "sm" float DEFAULT NULL, "st" float DEFAULT NULL, "cm" float DEFAULT NULL, "ct" float DEFAULT NULL, "mt" float DEFAULT NULL, "f_weight" float DEFAULT NULL, "r_weight" float DEFAULT NULL, "p_weight" float DEFAULT NULL, "o_weight" float DEFAULT NULL, "s_weight" float DEFAULT NULL, "c_weight" float DEFAULT NULL, "m_weight" float DEFAULT NULL, "t_weight" float DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "asurveys" ("id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","o_uia","o_a","uep_uia","uep_a","uia_a","pt","os","oc","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight")
+                     SELECT "id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","o_uia","o_a","uep_uia","uep_a","uia_a","pt","os","oc","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight" FROM "surveys"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "surveys"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "surveys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT NULL, "user_type" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "ar_l" float DEFAULT NULL, "ar_o" float DEFAULT NULL, "ar_uep" float DEFAULT NULL, "ar_uia" float DEFAULT NULL, "ar_a" float DEFAULT NULL, "l_o" float DEFAULT NULL, "l_uep" float DEFAULT NULL, "l_uia" float DEFAULT NULL, "l_a" float DEFAULT NULL, "o_uep" float DEFAULT NULL, "o_uia" float DEFAULT NULL, "o_a" float DEFAULT NULL, "uep_uia" float DEFAULT NULL, "uep_a" float DEFAULT NULL, "uia_a" float DEFAULT NULL, "os" float DEFAULT NULL, "oc" float DEFAULT NULL, "om" float DEFAULT NULL, "ot" float DEFAULT NULL, "sc" float DEFAULT NULL, "sm" float DEFAULT NULL, "st" float DEFAULT NULL, "cm" float DEFAULT NULL, "ct" float DEFAULT NULL, "mt" float DEFAULT NULL, "f_weight" float DEFAULT NULL, "r_weight" float DEFAULT NULL, "p_weight" float DEFAULT NULL, "o_weight" float DEFAULT NULL, "s_weight" float DEFAULT NULL, "c_weight" float DEFAULT NULL, "m_weight" float DEFAULT NULL, "t_weight" float DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "surveys" ("id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","o_uia","o_a","uep_uia","uep_a","uia_a","os","oc","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight")
+                     SELECT "id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","o_uia","o_a","uep_uia","uep_a","uia_a","os","oc","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight" FROM "asurveys"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "asurveys"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "asurveys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT NULL, "user_type" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "ar_l" float DEFAULT NULL, "ar_o" float DEFAULT NULL, "ar_uep" float DEFAULT NULL, "ar_uia" float DEFAULT NULL, "ar_a" float DEFAULT NULL, "l_o" float DEFAULT NULL, "l_uep" float DEFAULT NULL, "l_uia" float DEFAULT NULL, "l_a" float DEFAULT NULL, "o_uep" float DEFAULT NULL, "o_uia" float DEFAULT NULL, "o_a" float DEFAULT NULL, "uep_uia" float DEFAULT NULL, "uep_a" float DEFAULT NULL, "uia_a" float DEFAULT NULL, "os" float DEFAULT NULL, "oc" float DEFAULT NULL, "om" float DEFAULT NULL, "ot" float DEFAULT NULL, "sc" float DEFAULT NULL, "sm" float DEFAULT NULL, "st" float DEFAULT NULL, "cm" float DEFAULT NULL, "ct" float DEFAULT NULL, "mt" float DEFAULT NULL, "f_weight" float DEFAULT NULL, "r_weight" float DEFAULT NULL, "p_weight" float DEFAULT NULL, "o_weight" float DEFAULT NULL, "s_weight" float DEFAULT NULL, "c_weight" float DEFAULT NULL, "m_weight" float DEFAULT NULL, "t_weight" float DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "asurveys" ("id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","o_uia","o_a","uep_uia","uep_a","uia_a","os","oc","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight")
+                     SELECT "id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","o_uia","o_a","uep_uia","uep_a","uia_a","os","oc","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight" FROM "surveys"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "surveys"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "surveys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT NULL, "user_type" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "ar_l" float DEFAULT NULL, "ar_o" float DEFAULT NULL, "ar_uep" float DEFAULT NULL, "ar_uia" float DEFAULT NULL, "ar_a" float DEFAULT NULL, "l_o" float DEFAULT NULL, "l_uep" float DEFAULT NULL, "l_uia" float DEFAULT NULL, "l_a" float DEFAULT NULL, "o_uep" float DEFAULT NULL, "o_uia" float DEFAULT NULL, "o_a" float DEFAULT NULL, "uep_uia" float DEFAULT NULL, "uep_a" float DEFAULT NULL, "uia_a" float DEFAULT NULL, "oc" float DEFAULT NULL, "om" float DEFAULT NULL, "ot" float DEFAULT NULL, "sc" float DEFAULT NULL, "sm" float DEFAULT NULL, "st" float DEFAULT NULL, "cm" float DEFAULT NULL, "ct" float DEFAULT NULL, "mt" float DEFAULT NULL, "f_weight" float DEFAULT NULL, "r_weight" float DEFAULT NULL, "p_weight" float DEFAULT NULL, "o_weight" float DEFAULT NULL, "s_weight" float DEFAULT NULL, "c_weight" float DEFAULT NULL, "m_weight" float DEFAULT NULL, "t_weight" float DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "surveys" ("id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","o_uia","o_a","uep_uia","uep_a","uia_a","oc","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight")
+                     SELECT "id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","o_uia","o_a","uep_uia","uep_a","uia_a","oc","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight" FROM "asurveys"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "asurveys"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TEMPORARY TABLE "asurveys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT NULL, "user_type" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "ar_l" float DEFAULT NULL, "ar_o" float DEFAULT NULL, "ar_uep" float DEFAULT NULL, "ar_uia" float DEFAULT NULL, "ar_a" float DEFAULT NULL, "l_o" float DEFAULT NULL, "l_uep" float DEFAULT NULL, "l_uia" float DEFAULT NULL, "l_a" float DEFAULT NULL, "o_uep" float DEFAULT NULL, "o_uia" float DEFAULT NULL, "o_a" float DEFAULT NULL, "uep_uia" float DEFAULT NULL, "uep_a" float DEFAULT NULL, "uia_a" float DEFAULT NULL, "oc" float DEFAULT NULL, "om" float DEFAULT NULL, "ot" float DEFAULT NULL, "sc" float DEFAULT NULL, "sm" float DEFAULT NULL, "st" float DEFAULT NULL, "cm" float DEFAULT NULL, "ct" float DEFAULT NULL, "mt" float DEFAULT NULL, "f_weight" float DEFAULT NULL, "r_weight" float DEFAULT NULL, "p_weight" float DEFAULT NULL, "o_weight" float DEFAULT NULL, "s_weight" float DEFAULT NULL, "c_weight" float DEFAULT NULL, "m_weight" float DEFAULT NULL, "t_weight" float DEFAULT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[32mINSERT INTO "asurveys" ("id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","o_uia","o_a","uep_uia","uep_a","uia_a","oc","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight")
+                     SELECT "id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","o_uia","o_a","uep_uia","uep_a","uia_a","oc","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight" FROM "surveys"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "surveys"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "surveys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT NULL, "user_type" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "ar_l" float DEFAULT NULL, "ar_o" float DEFAULT NULL, "ar_uep" float DEFAULT NULL, "ar_uia" float DEFAULT NULL, "ar_a" float DEFAULT NULL, "l_o" float DEFAULT NULL, "l_uep" float DEFAULT NULL, "l_uia" float DEFAULT NULL, "l_a" float DEFAULT NULL, "o_uep" float DEFAULT NULL, "o_uia" float DEFAULT NULL, "o_a" float DEFAULT NULL, "uep_uia" float DEFAULT NULL, "uep_a" float DEFAULT NULL, "uia_a" float DEFAULT NULL, "om" float DEFAULT NULL, "ot" float DEFAULT NULL, "sc" float DEFAULT NULL, "sm" float DEFAULT NULL, "st" float DEFAULT NULL, "cm" float DEFAULT NULL, "ct" float DEFAULT NULL, "mt" float DEFAULT NULL, "f_weight" float DEFAULT NULL, "r_weight" float DEFAULT NULL, "p_weight" float DEFAULT NULL, "o_weight" float DEFAULT NULL, "s_weight" float DEFAULT NULL, "c_weight" float DEFAULT NULL, "m_weight" float DEFAULT NULL, "t_weight" float DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "surveys" ("id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","o_uia","o_a","uep_uia","uep_a","uia_a","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight")
+                     SELECT "id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","o_uia","o_a","uep_uia","uep_a","uia_a","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight" FROM "asurveys"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "asurveys"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "asurveys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT NULL, "user_type" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "ar_l" float DEFAULT NULL, "ar_o" float DEFAULT NULL, "ar_uep" float DEFAULT NULL, "ar_uia" float DEFAULT NULL, "ar_a" float DEFAULT NULL, "l_o" float DEFAULT NULL, "l_uep" float DEFAULT NULL, "l_uia" float DEFAULT NULL, "l_a" float DEFAULT NULL, "o_uep" float DEFAULT NULL, "o_uia" float DEFAULT NULL, "o_a" float DEFAULT NULL, "uep_uia" float DEFAULT NULL, "uep_a" float DEFAULT NULL, "uia_a" float DEFAULT NULL, "om" float DEFAULT NULL, "ot" float DEFAULT NULL, "sc" float DEFAULT NULL, "sm" float DEFAULT NULL, "st" float DEFAULT NULL, "cm" float DEFAULT NULL, "ct" float DEFAULT NULL, "mt" float DEFAULT NULL, "f_weight" float DEFAULT NULL, "r_weight" float DEFAULT NULL, "p_weight" float DEFAULT NULL, "o_weight" float DEFAULT NULL, "s_weight" float DEFAULT NULL, "c_weight" float DEFAULT NULL, "m_weight" float DEFAULT NULL, "t_weight" float DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "asurveys" ("id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","o_uia","o_a","uep_uia","uep_a","uia_a","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight")
+                     SELECT "id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","o_uia","o_a","uep_uia","uep_a","uia_a","om","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight" FROM "surveys"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "surveys"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "surveys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT NULL, "user_type" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "ar_l" float DEFAULT NULL, "ar_o" float DEFAULT NULL, "ar_uep" float DEFAULT NULL, "ar_uia" float DEFAULT NULL, "ar_a" float DEFAULT NULL, "l_o" float DEFAULT NULL, "l_uep" float DEFAULT NULL, "l_uia" float DEFAULT NULL, "l_a" float DEFAULT NULL, "o_uep" float DEFAULT NULL, "o_uia" float DEFAULT NULL, "o_a" float DEFAULT NULL, "uep_uia" float DEFAULT NULL, "uep_a" float DEFAULT NULL, "uia_a" float DEFAULT NULL, "ot" float DEFAULT NULL, "sc" float DEFAULT NULL, "sm" float DEFAULT NULL, "st" float DEFAULT NULL, "cm" float DEFAULT NULL, "ct" float DEFAULT NULL, "mt" float DEFAULT NULL, "f_weight" float DEFAULT NULL, "r_weight" float DEFAULT NULL, "p_weight" float DEFAULT NULL, "o_weight" float DEFAULT NULL, "s_weight" float DEFAULT NULL, "c_weight" float DEFAULT NULL, "m_weight" float DEFAULT NULL, "t_weight" float DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "surveys" ("id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","o_uia","o_a","uep_uia","uep_a","uia_a","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight")
+                     SELECT "id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","o_uia","o_a","uep_uia","uep_a","uia_a","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight" FROM "asurveys"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "asurveys"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "asurveys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT NULL, "user_type" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "ar_l" float DEFAULT NULL, "ar_o" float DEFAULT NULL, "ar_uep" float DEFAULT NULL, "ar_uia" float DEFAULT NULL, "ar_a" float DEFAULT NULL, "l_o" float DEFAULT NULL, "l_uep" float DEFAULT NULL, "l_uia" float DEFAULT NULL, "l_a" float DEFAULT NULL, "o_uep" float DEFAULT NULL, "o_uia" float DEFAULT NULL, "o_a" float DEFAULT NULL, "uep_uia" float DEFAULT NULL, "uep_a" float DEFAULT NULL, "uia_a" float DEFAULT NULL, "ot" float DEFAULT NULL, "sc" float DEFAULT NULL, "sm" float DEFAULT NULL, "st" float DEFAULT NULL, "cm" float DEFAULT NULL, "ct" float DEFAULT NULL, "mt" float DEFAULT NULL, "f_weight" float DEFAULT NULL, "r_weight" float DEFAULT NULL, "p_weight" float DEFAULT NULL, "o_weight" float DEFAULT NULL, "s_weight" float DEFAULT NULL, "c_weight" float DEFAULT NULL, "m_weight" float DEFAULT NULL, "t_weight" float DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "asurveys" ("id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","o_uia","o_a","uep_uia","uep_a","uia_a","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight")
+                     SELECT "id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","o_uia","o_a","uep_uia","uep_a","uia_a","ot","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight" FROM "surveys"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "surveys"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "surveys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT NULL, "user_type" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "ar_l" float DEFAULT NULL, "ar_o" float DEFAULT NULL, "ar_uep" float DEFAULT NULL, "ar_uia" float DEFAULT NULL, "ar_a" float DEFAULT NULL, "l_o" float DEFAULT NULL, "l_uep" float DEFAULT NULL, "l_uia" float DEFAULT NULL, "l_a" float DEFAULT NULL, "o_uep" float DEFAULT NULL, "o_uia" float DEFAULT NULL, "o_a" float DEFAULT NULL, "uep_uia" float DEFAULT NULL, "uep_a" float DEFAULT NULL, "uia_a" float DEFAULT NULL, "sc" float DEFAULT NULL, "sm" float DEFAULT NULL, "st" float DEFAULT NULL, "cm" float DEFAULT NULL, "ct" float DEFAULT NULL, "mt" float DEFAULT NULL, "f_weight" float DEFAULT NULL, "r_weight" float DEFAULT NULL, "p_weight" float DEFAULT NULL, "o_weight" float DEFAULT NULL, "s_weight" float DEFAULT NULL, "c_weight" float DEFAULT NULL, "m_weight" float DEFAULT NULL, "t_weight" float DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "surveys" ("id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","o_uia","o_a","uep_uia","uep_a","uia_a","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight")
+                     SELECT "id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","o_uia","o_a","uep_uia","uep_a","uia_a","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight" FROM "asurveys"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "asurveys"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "asurveys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT NULL, "user_type" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "ar_l" float DEFAULT NULL, "ar_o" float DEFAULT NULL, "ar_uep" float DEFAULT NULL, "ar_uia" float DEFAULT NULL, "ar_a" float DEFAULT NULL, "l_o" float DEFAULT NULL, "l_uep" float DEFAULT NULL, "l_uia" float DEFAULT NULL, "l_a" float DEFAULT NULL, "o_uep" float DEFAULT NULL, "o_uia" float DEFAULT NULL, "o_a" float DEFAULT NULL, "uep_uia" float DEFAULT NULL, "uep_a" float DEFAULT NULL, "uia_a" float DEFAULT NULL, "sc" float DEFAULT NULL, "sm" float DEFAULT NULL, "st" float DEFAULT NULL, "cm" float DEFAULT NULL, "ct" float DEFAULT NULL, "mt" float DEFAULT NULL, "f_weight" float DEFAULT NULL, "r_weight" float DEFAULT NULL, "p_weight" float DEFAULT NULL, "o_weight" float DEFAULT NULL, "s_weight" float DEFAULT NULL, "c_weight" float DEFAULT NULL, "m_weight" float DEFAULT NULL, "t_weight" float DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "asurveys" ("id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","o_uia","o_a","uep_uia","uep_a","uia_a","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight")
+                     SELECT "id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","o_uia","o_a","uep_uia","uep_a","uia_a","sc","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight" FROM "surveys"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "surveys"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "surveys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT NULL, "user_type" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "ar_l" float DEFAULT NULL, "ar_o" float DEFAULT NULL, "ar_uep" float DEFAULT NULL, "ar_uia" float DEFAULT NULL, "ar_a" float DEFAULT NULL, "l_o" float DEFAULT NULL, "l_uep" float DEFAULT NULL, "l_uia" float DEFAULT NULL, "l_a" float DEFAULT NULL, "o_uep" float DEFAULT NULL, "o_uia" float DEFAULT NULL, "o_a" float DEFAULT NULL, "uep_uia" float DEFAULT NULL, "uep_a" float DEFAULT NULL, "uia_a" float DEFAULT NULL, "sm" float DEFAULT NULL, "st" float DEFAULT NULL, "cm" float DEFAULT NULL, "ct" float DEFAULT NULL, "mt" float DEFAULT NULL, "f_weight" float DEFAULT NULL, "r_weight" float DEFAULT NULL, "p_weight" float DEFAULT NULL, "o_weight" float DEFAULT NULL, "s_weight" float DEFAULT NULL, "c_weight" float DEFAULT NULL, "m_weight" float DEFAULT NULL, "t_weight" float DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "surveys" ("id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","o_uia","o_a","uep_uia","uep_a","uia_a","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight")
+                     SELECT "id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","o_uia","o_a","uep_uia","uep_a","uia_a","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight" FROM "asurveys"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "asurveys"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TEMPORARY TABLE "asurveys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT NULL, "user_type" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "ar_l" float DEFAULT NULL, "ar_o" float DEFAULT NULL, "ar_uep" float DEFAULT NULL, "ar_uia" float DEFAULT NULL, "ar_a" float DEFAULT NULL, "l_o" float DEFAULT NULL, "l_uep" float DEFAULT NULL, "l_uia" float DEFAULT NULL, "l_a" float DEFAULT NULL, "o_uep" float DEFAULT NULL, "o_uia" float DEFAULT NULL, "o_a" float DEFAULT NULL, "uep_uia" float DEFAULT NULL, "uep_a" float DEFAULT NULL, "uia_a" float DEFAULT NULL, "sm" float DEFAULT NULL, "st" float DEFAULT NULL, "cm" float DEFAULT NULL, "ct" float DEFAULT NULL, "mt" float DEFAULT NULL, "f_weight" float DEFAULT NULL, "r_weight" float DEFAULT NULL, "p_weight" float DEFAULT NULL, "o_weight" float DEFAULT NULL, "s_weight" float DEFAULT NULL, "c_weight" float DEFAULT NULL, "m_weight" float DEFAULT NULL, "t_weight" float DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "asurveys" ("id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","o_uia","o_a","uep_uia","uep_a","uia_a","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight")
+                     SELECT "id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","o_uia","o_a","uep_uia","uep_a","uia_a","sm","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight" FROM "surveys"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "surveys"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "surveys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT NULL, "user_type" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "ar_l" float DEFAULT NULL, "ar_o" float DEFAULT NULL, "ar_uep" float DEFAULT NULL, "ar_uia" float DEFAULT NULL, "ar_a" float DEFAULT NULL, "l_o" float DEFAULT NULL, "l_uep" float DEFAULT NULL, "l_uia" float DEFAULT NULL, "l_a" float DEFAULT NULL, "o_uep" float DEFAULT NULL, "o_uia" float DEFAULT NULL, "o_a" float DEFAULT NULL, "uep_uia" float DEFAULT NULL, "uep_a" float DEFAULT NULL, "uia_a" float DEFAULT NULL, "st" float DEFAULT NULL, "cm" float DEFAULT NULL, "ct" float DEFAULT NULL, "mt" float DEFAULT NULL, "f_weight" float DEFAULT NULL, "r_weight" float DEFAULT NULL, "p_weight" float DEFAULT NULL, "o_weight" float DEFAULT NULL, "s_weight" float DEFAULT NULL, "c_weight" float DEFAULT NULL, "m_weight" float DEFAULT NULL, "t_weight" float DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "surveys" ("id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","o_uia","o_a","uep_uia","uep_a","uia_a","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight")
+                     SELECT "id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","o_uia","o_a","uep_uia","uep_a","uia_a","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight" FROM "asurveys"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "asurveys"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "asurveys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT NULL, "user_type" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "ar_l" float DEFAULT NULL, "ar_o" float DEFAULT NULL, "ar_uep" float DEFAULT NULL, "ar_uia" float DEFAULT NULL, "ar_a" float DEFAULT NULL, "l_o" float DEFAULT NULL, "l_uep" float DEFAULT NULL, "l_uia" float DEFAULT NULL, "l_a" float DEFAULT NULL, "o_uep" float DEFAULT NULL, "o_uia" float DEFAULT NULL, "o_a" float DEFAULT NULL, "uep_uia" float DEFAULT NULL, "uep_a" float DEFAULT NULL, "uia_a" float DEFAULT NULL, "st" float DEFAULT NULL, "cm" float DEFAULT NULL, "ct" float DEFAULT NULL, "mt" float DEFAULT NULL, "f_weight" float DEFAULT NULL, "r_weight" float DEFAULT NULL, "p_weight" float DEFAULT NULL, "o_weight" float DEFAULT NULL, "s_weight" float DEFAULT NULL, "c_weight" float DEFAULT NULL, "m_weight" float DEFAULT NULL, "t_weight" float DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "asurveys" ("id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","o_uia","o_a","uep_uia","uep_a","uia_a","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight")
+                     SELECT "id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","o_uia","o_a","uep_uia","uep_a","uia_a","st","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight" FROM "surveys"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "surveys"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "surveys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT NULL, "user_type" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "ar_l" float DEFAULT NULL, "ar_o" float DEFAULT NULL, "ar_uep" float DEFAULT NULL, "ar_uia" float DEFAULT NULL, "ar_a" float DEFAULT NULL, "l_o" float DEFAULT NULL, "l_uep" float DEFAULT NULL, "l_uia" float DEFAULT NULL, "l_a" float DEFAULT NULL, "o_uep" float DEFAULT NULL, "o_uia" float DEFAULT NULL, "o_a" float DEFAULT NULL, "uep_uia" float DEFAULT NULL, "uep_a" float DEFAULT NULL, "uia_a" float DEFAULT NULL, "cm" float DEFAULT NULL, "ct" float DEFAULT NULL, "mt" float DEFAULT NULL, "f_weight" float DEFAULT NULL, "r_weight" float DEFAULT NULL, "p_weight" float DEFAULT NULL, "o_weight" float DEFAULT NULL, "s_weight" float DEFAULT NULL, "c_weight" float DEFAULT NULL, "m_weight" float DEFAULT NULL, "t_weight" float DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "surveys" ("id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","o_uia","o_a","uep_uia","uep_a","uia_a","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight")
+                     SELECT "id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","o_uia","o_a","uep_uia","uep_a","uia_a","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight" FROM "asurveys"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "asurveys"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TEMPORARY TABLE "asurveys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT NULL, "user_type" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "ar_l" float DEFAULT NULL, "ar_o" float DEFAULT NULL, "ar_uep" float DEFAULT NULL, "ar_uia" float DEFAULT NULL, "ar_a" float DEFAULT NULL, "l_o" float DEFAULT NULL, "l_uep" float DEFAULT NULL, "l_uia" float DEFAULT NULL, "l_a" float DEFAULT NULL, "o_uep" float DEFAULT NULL, "o_uia" float DEFAULT NULL, "o_a" float DEFAULT NULL, "uep_uia" float DEFAULT NULL, "uep_a" float DEFAULT NULL, "uia_a" float DEFAULT NULL, "cm" float DEFAULT NULL, "ct" float DEFAULT NULL, "mt" float DEFAULT NULL, "f_weight" float DEFAULT NULL, "r_weight" float DEFAULT NULL, "p_weight" float DEFAULT NULL, "o_weight" float DEFAULT NULL, "s_weight" float DEFAULT NULL, "c_weight" float DEFAULT NULL, "m_weight" float DEFAULT NULL, "t_weight" float DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "asurveys" ("id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","o_uia","o_a","uep_uia","uep_a","uia_a","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight")
+                     SELECT "id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","o_uia","o_a","uep_uia","uep_a","uia_a","cm","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight" FROM "surveys"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "surveys"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "surveys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT NULL, "user_type" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "ar_l" float DEFAULT NULL, "ar_o" float DEFAULT NULL, "ar_uep" float DEFAULT NULL, "ar_uia" float DEFAULT NULL, "ar_a" float DEFAULT NULL, "l_o" float DEFAULT NULL, "l_uep" float DEFAULT NULL, "l_uia" float DEFAULT NULL, "l_a" float DEFAULT NULL, "o_uep" float DEFAULT NULL, "o_uia" float DEFAULT NULL, "o_a" float DEFAULT NULL, "uep_uia" float DEFAULT NULL, "uep_a" float DEFAULT NULL, "uia_a" float DEFAULT NULL, "ct" float DEFAULT NULL, "mt" float DEFAULT NULL, "f_weight" float DEFAULT NULL, "r_weight" float DEFAULT NULL, "p_weight" float DEFAULT NULL, "o_weight" float DEFAULT NULL, "s_weight" float DEFAULT NULL, "c_weight" float DEFAULT NULL, "m_weight" float DEFAULT NULL, "t_weight" float DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "surveys" ("id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","o_uia","o_a","uep_uia","uep_a","uia_a","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight")
+                     SELECT "id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","o_uia","o_a","uep_uia","uep_a","uia_a","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight" FROM "asurveys"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "asurveys"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TEMPORARY TABLE "asurveys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT NULL, "user_type" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "ar_l" float DEFAULT NULL, "ar_o" float DEFAULT NULL, "ar_uep" float DEFAULT NULL, "ar_uia" float DEFAULT NULL, "ar_a" float DEFAULT NULL, "l_o" float DEFAULT NULL, "l_uep" float DEFAULT NULL, "l_uia" float DEFAULT NULL, "l_a" float DEFAULT NULL, "o_uep" float DEFAULT NULL, "o_uia" float DEFAULT NULL, "o_a" float DEFAULT NULL, "uep_uia" float DEFAULT NULL, "uep_a" float DEFAULT NULL, "uia_a" float DEFAULT NULL, "ct" float DEFAULT NULL, "mt" float DEFAULT NULL, "f_weight" float DEFAULT NULL, "r_weight" float DEFAULT NULL, "p_weight" float DEFAULT NULL, "o_weight" float DEFAULT NULL, "s_weight" float DEFAULT NULL, "c_weight" float DEFAULT NULL, "m_weight" float DEFAULT NULL, "t_weight" float DEFAULT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "asurveys" ("id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","o_uia","o_a","uep_uia","uep_a","uia_a","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight")
+                     SELECT "id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","o_uia","o_a","uep_uia","uep_a","uia_a","ct","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight" FROM "surveys"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "surveys"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "surveys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT NULL, "user_type" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "ar_l" float DEFAULT NULL, "ar_o" float DEFAULT NULL, "ar_uep" float DEFAULT NULL, "ar_uia" float DEFAULT NULL, "ar_a" float DEFAULT NULL, "l_o" float DEFAULT NULL, "l_uep" float DEFAULT NULL, "l_uia" float DEFAULT NULL, "l_a" float DEFAULT NULL, "o_uep" float DEFAULT NULL, "o_uia" float DEFAULT NULL, "o_a" float DEFAULT NULL, "uep_uia" float DEFAULT NULL, "uep_a" float DEFAULT NULL, "uia_a" float DEFAULT NULL, "mt" float DEFAULT NULL, "f_weight" float DEFAULT NULL, "r_weight" float DEFAULT NULL, "p_weight" float DEFAULT NULL, "o_weight" float DEFAULT NULL, "s_weight" float DEFAULT NULL, "c_weight" float DEFAULT NULL, "m_weight" float DEFAULT NULL, "t_weight" float DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "surveys" ("id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","o_uia","o_a","uep_uia","uep_a","uia_a","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight")
+                     SELECT "id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","o_uia","o_a","uep_uia","uep_a","uia_a","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight" FROM "asurveys"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "asurveys"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "asurveys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT NULL, "user_type" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "ar_l" float DEFAULT NULL, "ar_o" float DEFAULT NULL, "ar_uep" float DEFAULT NULL, "ar_uia" float DEFAULT NULL, "ar_a" float DEFAULT NULL, "l_o" float DEFAULT NULL, "l_uep" float DEFAULT NULL, "l_uia" float DEFAULT NULL, "l_a" float DEFAULT NULL, "o_uep" float DEFAULT NULL, "o_uia" float DEFAULT NULL, "o_a" float DEFAULT NULL, "uep_uia" float DEFAULT NULL, "uep_a" float DEFAULT NULL, "uia_a" float DEFAULT NULL, "mt" float DEFAULT NULL, "f_weight" float DEFAULT NULL, "r_weight" float DEFAULT NULL, "p_weight" float DEFAULT NULL, "o_weight" float DEFAULT NULL, "s_weight" float DEFAULT NULL, "c_weight" float DEFAULT NULL, "m_weight" float DEFAULT NULL, "t_weight" float DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "asurveys" ("id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","o_uia","o_a","uep_uia","uep_a","uia_a","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight")
+                     SELECT "id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","o_uia","o_a","uep_uia","uep_a","uia_a","mt","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight" FROM "surveys"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "surveys"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "surveys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT NULL, "user_type" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "ar_l" float DEFAULT NULL, "ar_o" float DEFAULT NULL, "ar_uep" float DEFAULT NULL, "ar_uia" float DEFAULT NULL, "ar_a" float DEFAULT NULL, "l_o" float DEFAULT NULL, "l_uep" float DEFAULT NULL, "l_uia" float DEFAULT NULL, "l_a" float DEFAULT NULL, "o_uep" float DEFAULT NULL, "o_uia" float DEFAULT NULL, "o_a" float DEFAULT NULL, "uep_uia" float DEFAULT NULL, "uep_a" float DEFAULT NULL, "uia_a" float DEFAULT NULL, "f_weight" float DEFAULT NULL, "r_weight" float DEFAULT NULL, "p_weight" float DEFAULT NULL, "o_weight" float DEFAULT NULL, "s_weight" float DEFAULT NULL, "c_weight" float DEFAULT NULL, "m_weight" float DEFAULT NULL, "t_weight" float DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "surveys" ("id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","o_uia","o_a","uep_uia","uep_a","uia_a","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight")
+                     SELECT "id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","o_uia","o_a","uep_uia","uep_a","uia_a","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight" FROM "asurveys"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "asurveys"[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180126070659"]]
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RemoveLastTwoColumns (20180126071926)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TEMPORARY TABLE "asurveys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT NULL, "user_type" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "ar_l" float DEFAULT NULL, "ar_o" float DEFAULT NULL, "ar_uep" float DEFAULT NULL, "ar_uia" float DEFAULT NULL, "ar_a" float DEFAULT NULL, "l_o" float DEFAULT NULL, "l_uep" float DEFAULT NULL, "l_uia" float DEFAULT NULL, "l_a" float DEFAULT NULL, "o_uep" float DEFAULT NULL, "o_uia" float DEFAULT NULL, "o_a" float DEFAULT NULL, "uep_uia" float DEFAULT NULL, "uep_a" float DEFAULT NULL, "uia_a" float DEFAULT NULL, "f_weight" float DEFAULT NULL, "r_weight" float DEFAULT NULL, "p_weight" float DEFAULT NULL, "o_weight" float DEFAULT NULL, "s_weight" float DEFAULT NULL, "c_weight" float DEFAULT NULL, "m_weight" float DEFAULT NULL, "t_weight" float DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "asurveys" ("id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","o_uia","o_a","uep_uia","uep_a","uia_a","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight")
+                     SELECT "id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","o_uia","o_a","uep_uia","uep_a","uia_a","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight","t_weight" FROM "surveys"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "surveys"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "surveys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT NULL, "user_type" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "ar_l" float DEFAULT NULL, "ar_o" float DEFAULT NULL, "ar_uep" float DEFAULT NULL, "ar_uia" float DEFAULT NULL, "ar_a" float DEFAULT NULL, "l_o" float DEFAULT NULL, "l_uep" float DEFAULT NULL, "l_uia" float DEFAULT NULL, "l_a" float DEFAULT NULL, "o_uep" float DEFAULT NULL, "o_uia" float DEFAULT NULL, "o_a" float DEFAULT NULL, "uep_uia" float DEFAULT NULL, "uep_a" float DEFAULT NULL, "uia_a" float DEFAULT NULL, "f_weight" float DEFAULT NULL, "r_weight" float DEFAULT NULL, "p_weight" float DEFAULT NULL, "o_weight" float DEFAULT NULL, "s_weight" float DEFAULT NULL, "c_weight" float DEFAULT NULL, "m_weight" float DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "surveys" ("id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","o_uia","o_a","uep_uia","uep_a","uia_a","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight")
+                     SELECT "id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","o_uia","o_a","uep_uia","uep_a","uia_a","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight" FROM "asurveys"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "asurveys"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "asurveys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT NULL, "user_type" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "ar_l" float DEFAULT NULL, "ar_o" float DEFAULT NULL, "ar_uep" float DEFAULT NULL, "ar_uia" float DEFAULT NULL, "ar_a" float DEFAULT NULL, "l_o" float DEFAULT NULL, "l_uep" float DEFAULT NULL, "l_uia" float DEFAULT NULL, "l_a" float DEFAULT NULL, "o_uep" float DEFAULT NULL, "o_uia" float DEFAULT NULL, "o_a" float DEFAULT NULL, "uep_uia" float DEFAULT NULL, "uep_a" float DEFAULT NULL, "uia_a" float DEFAULT NULL, "f_weight" float DEFAULT NULL, "r_weight" float DEFAULT NULL, "p_weight" float DEFAULT NULL, "o_weight" float DEFAULT NULL, "s_weight" float DEFAULT NULL, "c_weight" float DEFAULT NULL, "m_weight" float DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "asurveys" ("id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","o_uia","o_a","uep_uia","uep_a","uia_a","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight")
+                     SELECT "id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","o_uia","o_a","uep_uia","uep_a","uia_a","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight","m_weight" FROM "surveys"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "surveys"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "surveys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT NULL, "user_type" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "ar_l" float DEFAULT NULL, "ar_o" float DEFAULT NULL, "ar_uep" float DEFAULT NULL, "ar_uia" float DEFAULT NULL, "ar_a" float DEFAULT NULL, "l_o" float DEFAULT NULL, "l_uep" float DEFAULT NULL, "l_uia" float DEFAULT NULL, "l_a" float DEFAULT NULL, "o_uep" float DEFAULT NULL, "o_uia" float DEFAULT NULL, "o_a" float DEFAULT NULL, "uep_uia" float DEFAULT NULL, "uep_a" float DEFAULT NULL, "uia_a" float DEFAULT NULL, "f_weight" float DEFAULT NULL, "r_weight" float DEFAULT NULL, "p_weight" float DEFAULT NULL, "o_weight" float DEFAULT NULL, "s_weight" float DEFAULT NULL, "c_weight" float DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "surveys" ("id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","o_uia","o_a","uep_uia","uep_a","uia_a","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight")
+                     SELECT "id","name","user_type","created_at","updated_at","ar_l","ar_o","ar_uep","ar_uia","ar_a","l_o","l_uep","l_uia","l_a","o_uep","o_uia","o_a","uep_uia","uep_a","uia_a","f_weight","r_weight","p_weight","o_weight","s_weight","c_weight" FROM "asurveys"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "asurveys"[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180126071926"]]
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2018-01-26 15:20:50 +0800
+Started GET "/surveys/new" for 127.0.0.1 at 2018-01-26 15:20:50 +0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SurveysController#new as HTML
+Processing by SurveysController#index as HTML
+  Rendering surveys/new.html.erb within layouts/application
+  Rendering surveys/index.html.erb within layouts/application
+  Rendered surveys/new.html.erb within layouts/application (74.1ms)
+  Rendered surveys/index.html.erb within layouts/application (403.2ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 715ms (Views: 650.4ms | ActiveRecord: 0.8ms)
+
+
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 645ms (Views: 643.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/surveys" for 127.0.0.1 at 2018-01-26 15:21:35 +0800
+Processing by SurveysController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WhIwn5W9w/+vUsj3H7zmmuSYXFjhinJd/qKUcsPnDPYUiRzAU+wgP8uCCYx8Bvv5PFzg76MDRR4v+wXZywCIdg==", "survey"=>{"name"=>"Testing 1", "user_type"=>"user", "ar_l"=>"9", "ar_o"=>"9", "ar_uep"=>"9", "ar_uia"=>"9", "ar_a"=>"9", "l_o"=>"5", "l_uep"=>"5", "l_uia"=>"5", "l_a"=>"5", "o_uep"=>"5", "o_uia"=>"5", "o_a"=>"5", "uep_uia"=>"5", "uep_a"=>"5", "uia_a"=>"5"}, "commit"=>"Submit Survey"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (5.1.3) lib/action_controller/metal/request_forgery_protection.rb:195:in `handle_unverified_request'
+actionpack (5.1.3) lib/action_controller/metal/request_forgery_protection.rb:227:in `handle_unverified_request'
+actionpack (5.1.3) lib/action_controller/metal/request_forgery_protection.rb:222:in `verify_authenticity_token'
+activesupport (5.1.3) lib/active_support/callbacks.rb:413:in `block in make_lambda'
+activesupport (5.1.3) lib/active_support/callbacks.rb:197:in `block (2 levels) in halting'
+actionpack (5.1.3) lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.1.3) lib/active_support/callbacks.rb:198:in `block in halting'
+activesupport (5.1.3) lib/active_support/callbacks.rb:507:in `block in invoke_before'
+activesupport (5.1.3) lib/active_support/callbacks.rb:507:in `each'
+activesupport (5.1.3) lib/active_support/callbacks.rb:507:in `invoke_before'
+activesupport (5.1.3) lib/active_support/callbacks.rb:130:in `run_callbacks'
+actionpack (5.1.3) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.3) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.3) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.3) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.3) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.3) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.3) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.3) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.3) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.3) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.3) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.3) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.3) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.3) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/surveys/new" for 127.0.0.1 at 2018-01-26 15:22:37 +0800
+Started GET "/" for 127.0.0.1 at 2018-01-26 15:22:37 +0800
+Processing by SurveysController#new as HTML
+Processing by SurveysController#index as HTML
+  Rendering surveys/new.html.erb within layouts/application
+  Rendering surveys/index.html.erb within layouts/application
+  Rendered surveys/new.html.erb within layouts/application (5.9ms)
+  Rendered surveys/index.html.erb within layouts/application (2.2ms)
+Started GET "/" for 127.0.0.1 at 2018-01-26 15:22:37 +0800
+Processing by SurveysController#index as HTML
+  Rendering surveys/index.html.erb within layouts/application
+  Rendered surveys/index.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 244ms (Views: 239.5ms | ActiveRecord: 0.0ms)
+
+
+  Rendered layouts/_footer.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 271ms (Views: 269.1ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 126ms (Views: 124.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/surveys/new" for 127.0.0.1 at 2018-01-26 15:22:38 +0800
+Processing by SurveysController#new as HTML
+  Rendering surveys/new.html.erb within layouts/application
+  Rendered surveys/new.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 102ms (Views: 99.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/surveys" for 127.0.0.1 at 2018-01-26 15:22:44 +0800
+Processing by SurveysController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hCcW4zpqAsPDhVJjif8Iygpy88G0RkCAPx2/JGk7gNfUink66sb5onFolcpvSVzd2Q4eXtCT9XC7y0k6d9tB9w==", "survey"=>{"name"=>"TEAST", "user_type"=>"user", "ar_l"=>"5", "ar_o"=>"5", "ar_uep"=>"5", "ar_uia"=>"5", "ar_a"=>"5", "l_o"=>"5", "l_uep"=>"5", "l_uia"=>"5", "l_a"=>"5", "o_uep"=>"5", "o_uia"=>"5", "o_a"=>"5", "uep_uia"=>"5", "uep_a"=>"5", "uia_a"=>"5"}, "commit"=>"Submit Survey"}
+Unpermitted parameter: :uia_a
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering surveys/new.html.erb within layouts/application
+  Rendered surveys/new.html.erb within layouts/application (4.9ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 96ms (Views: 88.8ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/surveys" for 127.0.0.1 at 2018-01-26 15:23:53 +0800
+Processing by SurveysController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9/s2jZarm/ngVBHnDz+FcBnTD0ws+sTLsJhrh0ea/7XXTFif8H4czYff54a4QBMlJh/QKDtOCTA7OxUbzDv3lQ==", "survey"=>{"name"=>"TEAST", "user_type"=>"user", "ar_l"=>"5", "ar_o"=>"5", "ar_uep"=>"5", "ar_uia"=>"5", "ar_a"=>"5", "l_o"=>"5", "l_uep"=>"5", "l_uia"=>"5", "l_a"=>"5", "o_uep"=>"5", "o_uia"=>"5", "o_a"=>"5", "uep_uia"=>"5", "uep_a"=>"5", "uia_a"=>"5"}, "commit"=>"Submit Survey"}
+Unpermitted parameter: :uia_a
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering surveys/new.html.erb within layouts/application
+  Rendered surveys/new.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 81ms (Views: 76.5ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/surveys" for 127.0.0.1 at 2018-01-26 15:25:07 +0800
+Processing by SurveysController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"u+61FuQIP7CcNOxnru/2gFmHyVdrRBFHck6MSeWkI5+bWdsEgt24hPu/GgYZkGDVZksWM3zw3Lz57fLVbgUrvw==", "survey"=>{"name"=>"TEAST", "user_type"=>"user", "ar_l"=>"5", "ar_o"=>"5", "ar_uep"=>"5", "ar_uia"=>"5", "ar_a"=>"5", "l_o"=>"5", "l_uep"=>"5", "l_uia"=>"5", "l_a"=>"5", "o_uep"=>"5", "o_uia"=>"5", "o_a"=>"5", "uep_uia"=>"5", "uep_a"=>"5", "uia_a"=>"5"}, "commit"=>"Submit Survey"}
+Unpermitted parameter: :uia_a
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering surveys/new.html.erb within layouts/application
+  Rendered surveys/new.html.erb within layouts/application (6.9ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 89ms (Views: 83.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/surveys" for 127.0.0.1 at 2018-01-26 15:25:11 +0800
+Processing by SurveysController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6ej7RKfsc1QhGeQaHukYm8Li+Cu6kFyF01d/Wd91DFHJX5VWwTn0YEaSEnuplo7O/S4nT60kkX5Y9AHFVNQEcQ==", "survey"=>{"name"=>"TEAST", "user_type"=>"user", "ar_l"=>"5", "ar_o"=>"5", "ar_uep"=>"5", "ar_uia"=>"5", "ar_a"=>"5", "l_o"=>"5", "l_uep"=>"5", "l_uia"=>"5", "l_a"=>"5", "o_uep"=>"5", "o_uia"=>"5", "o_a"=>"5", "uep_uia"=>"5", "uep_a"=>"5", "uia_a"=>"8"}, "commit"=>"Submit Survey"}
+Unpermitted parameter: :uia_a
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering surveys/new.html.erb within layouts/application
+  Rendered surveys/new.html.erb within layouts/application (8.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 90ms (Views: 85.6ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/surveys" for 127.0.0.1 at 2018-01-26 15:25:16 +0800
+Processing by SurveysController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5uIp5rjNN2KvveN8B39XRO7LmncYM/w8SfS51xevi5HGVUf03hiwVsg2FR2wAMER0QdFEw+HMcfCV8dLnA6DsQ==", "survey"=>{"name"=>"TEAST", "user_type"=>"user", "ar_l"=>"6", "ar_o"=>"5", "ar_uep"=>"5", "ar_uia"=>"5", "ar_a"=>"5", "l_o"=>"5", "l_uep"=>"5", "l_uia"=>"5", "l_a"=>"5", "o_uep"=>"5", "o_uia"=>"5", "o_a"=>"5", "uep_uia"=>"5", "uep_a"=>"5", "uia_a"=>"5"}, "commit"=>"Submit Survey"}
+Unpermitted parameter: :uia_a
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering surveys/new.html.erb within layouts/application
+  Rendered surveys/new.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 81ms (Views: 76.8ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/surveys" for 127.0.0.1 at 2018-01-26 15:26:08 +0800
+Processing by SurveysController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aN4Ri2IHe0ry187kwx59x+ljnWz3zstFwoXctjLWCRRIaX+ZBNL8fpVcOIV0YeuS1q9CCOB6Br5JJqIquXcBNA==", "survey"=>{"name"=>"TEAST", "user_type"=>"user", "ar_l"=>"5", "ar_o"=>"5", "ar_uep"=>"5", "ar_uia"=>"5", "ar_a"=>"5", "l_o"=>"5", "l_uep"=>"5", "l_uia"=>"5", "l_a"=>"5", "o_uep"=>"5", "o_uia"=>"5", "o_a"=>"5", "uep_uia"=>"5", "uep_a"=>"5", "uia_a"=>"5"}, "commit"=>"Submit Survey"}
+Unpermitted parameter: :uia_a
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering surveys/new.html.erb within layouts/application
+  Rendered surveys/new.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 81ms (Views: 75.1ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/surveys" for 127.0.0.1 at 2018-01-26 15:26:30 +0800
+Processing by SurveysController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iLPIkpngwSVCfPTD6+5DSM2BxCy4WC6HVuY9Dpxs8yioBKaA/zVGESX3AqJckdUd8k0bSK/s43zdRUOSF837CA==", "survey"=>{"name"=>"TEAST", "user_type"=>"user", "ar_l"=>"9", "ar_o"=>"5", "ar_uep"=>"5", "ar_uia"=>"5", "ar_a"=>"5", "l_o"=>"5", "l_uep"=>"5", "l_uia"=>"5", "l_a"=>"5", "o_uep"=>"5", "o_uia"=>"5", "o_a"=>"5", "uep_uia"=>"5", "uep_a"=>"5", "uia_a"=>"5"}, "commit"=>"Submit Survey"}
+Unpermitted parameter: :uia_a
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering surveys/new.html.erb within layouts/application
+  Rendered surveys/new.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 84ms (Views: 79.6ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/surveys" for 127.0.0.1 at 2018-01-26 15:42:13 +0800
+Processing by SurveysController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3Qp9XFVN6U4dtSkrvOVdMNLrFcmDxu7QObyLtho3sH/9vRNOM5hueno+30oLmstl7SfKrZRyIyuyH/UqkZa4Xw==", "survey"=>{"name"=>"TEAST", "user_type"=>"user", "ar_l"=>"5", "ar_o"=>"5", "ar_uep"=>"5", "ar_uia"=>"5", "ar_a"=>"5", "l_o"=>"5", "l_uep"=>"5", "l_uia"=>"5", "l_a"=>"5", "o_uep"=>"5", "o_uia"=>"5", "o_a"=>"5", "uep_uia"=>"5", "uep_a"=>"5", "uia_a"=>"5"}, "commit"=>"Submit Survey"}
+Unpermitted parameter: :uia_a
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering surveys/new.html.erb within layouts/application
+  Rendered surveys/new.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 75ms (Views: 70.8ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/surveys" for 127.0.0.1 at 2018-01-26 15:50:19 +0800
+Processing by SurveysController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wdT/h3p8sQrGHFrC9pOtu0CZniEFV1Zcb4TxRwC+oBnhY5GVHKk2PqGXrKNB7Dvuf1VBRRLjm6fkJ4/bix+oOQ==", "survey"=>{"name"=>"TEAST", "user_type"=>"user", "ar_l"=>"5", "ar_o"=>"5", "ar_uep"=>"5", "ar_uia"=>"5", "ar_a"=>"5", "l_o"=>"5", "l_uep"=>"5", "l_uia"=>"5", "l_a"=>"5", "o_uep"=>"5", "o_uia"=>"5", "o_a"=>"5", "uep_uia"=>"5", "uep_a"=>"5", "uia_a"=>"1"}, "commit"=>"Submit Survey"}
+Unpermitted parameter: :uia_a
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering surveys/new.html.erb within layouts/application
+  Rendered surveys/new.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 87ms (Views: 82.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-26 15:51:42 +0800
+Started GET "/surveys/new" for 127.0.0.1 at 2018-01-26 15:51:42 +0800
+Processing by SurveysController#index as HTML
+  Rendering surveys/index.html.erb within layouts/application
+  Rendered surveys/index.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 73ms (Views: 70.6ms)
+
+
+Processing by SurveysController#new as HTML
+  Rendering surveys/new.html.erb within layouts/application
+  Rendered surveys/new.html.erb within layouts/application (5.9ms)
+Started GET "/" for 127.0.0.1 at 2018-01-26 15:51:42 +0800
+Processing by SurveysController#index as HTML
+  Rendering surveys/index.html.erb within layouts/application
+  Rendered surveys/index.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 213ms (Views: 178.6ms | ActiveRecord: 0.8ms)
+
+
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 123ms (Views: 121.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/surveys" for 127.0.0.1 at 2018-01-26 15:51:49 +0800
+Processing by SurveysController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EwOPU6FehUWXLnzHylozGRCsOx/Ih7VRfbJPca+E/4FDruCKcfJ+JCXDu24s7GcOw9DWgKxSAKH5ZLlvsWQ+oQ==", "survey"=>{"name"=>"TESTME", "user_type"=>"developer", "ar_l"=>"5", "ar_o"=>"5", "ar_uep"=>"5", "ar_uia"=>"5", "ar_a"=>"5", "l_o"=>"5", "l_uep"=>"5", "l_uia"=>"5", "l_a"=>"5", "o_uep"=>"5", "o_uia"=>"5", "o_a"=>"5", "uep_uia"=>"5", "uep_a"=>"5", "uia_a"=>"5"}, "commit"=>"Submit Survey"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "surveys" ("name", "user_type", "created_at", "updated_at", "ar_l", "ar_o", "ar_uep", "ar_uia", "ar_a", "l_o", "l_uep", "l_uia", "l_a", "o_uep", "o_uia", "o_a", "uep_uia", "uep_a", "uia_a") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "TESTME"], ["user_type", "developer"], ["created_at", "2018-01-26 07:51:49.624933"], ["updated_at", "2018-01-26 07:51:49.624933"], ["ar_l", 5.0], ["ar_o", 5.0], ["ar_uep", 5.0], ["ar_uia", 5.0], ["ar_a", 5.0], ["l_o", 5.0], ["l_uep", 5.0], ["l_uia", 5.0], ["l_a", 5.0], ["o_uep", 5.0], ["o_uia", 5.0], ["o_a", 5.0], ["uep_uia", 5.0], ["uep_a", 5.0], ["uia_a", 5.0]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "surveys" SET "updated_at" = ?, "ar_l" = ?, "ar_o" = ?, "ar_uep" = ?, "ar_uia" = ?, "ar_a" = ?, "l_o" = ?, "l_uep" = ?, "l_uia" = ?, "l_a" = ?, "o_uep" = ?, "o_uia" = ?, "o_a" = ?, "uep_uia" = ?, "uep_a" = ?, "uia_a" = ?, "f_weight" = ?, "r_weight" = ?, "p_weight" = ?, "o_weight" = ?, "s_weight" = ?, "c_weight" = ? WHERE "surveys"."id" = ?[0m  [["updated_at", "2018-01-26 07:51:49.635234"], ["ar_l", 1.0], ["ar_o", 1.0], ["ar_uep", 1.0], ["ar_uia", 1.0], ["ar_a", 1.0], ["l_o", 1.0], ["l_uep", 1.0], ["l_uia", 1.0], ["l_a", 1.0], ["o_uep", 1.0], ["o_uia", 1.0], ["o_a", 1.0], ["uep_uia", 1.0], ["uep_a", 1.0], ["uia_a", 1.0], ["f_weight", 0.16666666666666663], ["r_weight", 0.16666666666666663], ["p_weight", 0.16666666666666663], ["o_weight", 0.16666666666666663], ["s_weight", 0.16666666666666677], ["c_weight", 0.16666666666666663], ["id", 1]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/thank
+Completed 302 Found in 19ms (ActiveRecord: 4.6ms)
+
+
+Started GET "/thank" for 127.0.0.1 at 2018-01-26 15:51:49 +0800
+Processing by SurveysController#thank as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "surveys" WHERE (user_type = 'developer')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_type = 'developer')[0m
+  Rendering surveys/thank.html.erb within layouts/application
+  Rendered surveys/thank.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 75ms (Views: 70.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/surveys/new" for 127.0.0.1 at 2018-01-26 15:52:08 +0800
+Processing by SurveysController#new as HTML
+  Rendering surveys/new.html.erb within layouts/application
+  Rendered surveys/new.html.erb within layouts/application (4.2ms)
+Started GET "/" for 127.0.0.1 at 2018-01-26 15:52:08 +0800
+Processing by SurveysController#index as HTML
+  Rendering surveys/index.html.erb within layouts/application
+  Rendered surveys/index.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 148ms (Views: 146.0ms | ActiveRecord: 0.0ms)
+
+
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 137ms (Views: 135.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-26 15:52:08 +0800
+Processing by SurveysController#index as HTML
+  Rendering surveys/index.html.erb within layouts/application
+  Rendered surveys/index.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 75ms (Views: 73.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/surveys/new" for 127.0.0.1 at 2018-01-26 15:52:10 +0800
+Processing by SurveysController#new as HTML
+  Rendering surveys/new.html.erb within layouts/application
+  Rendered surveys/new.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 82ms (Views: 80.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/surveys" for 127.0.0.1 at 2018-01-26 15:52:21 +0800
+Processing by SurveysController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9W+3m3kLwMzrIYdJiBfBhWqeuEnfPYjNL8r5Wa9E5aClwthCqac7rVnMQOBuoZWSueJV1rvoPT2rHA9HsaQkgA==", "survey"=>{"name"=>"TEST2", "user_type"=>"developer", "ar_l"=>"9", "ar_o"=>"9", "ar_uep"=>"9", "ar_uia"=>"9", "ar_a"=>"9", "l_o"=>"5", "l_uep"=>"5", "l_uia"=>"5", "l_a"=>"5", "o_uep"=>"5", "o_uia"=>"5", "o_a"=>"5", "uep_uia"=>"5", "uep_a"=>"5", "uia_a"=>"5"}, "commit"=>"Submit Survey"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "surveys" ("name", "user_type", "created_at", "updated_at", "ar_l", "ar_o", "ar_uep", "ar_uia", "ar_a", "l_o", "l_uep", "l_uia", "l_a", "o_uep", "o_uia", "o_a", "uep_uia", "uep_a", "uia_a") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "TEST2"], ["user_type", "developer"], ["created_at", "2018-01-26 07:52:21.398920"], ["updated_at", "2018-01-26 07:52:21.398920"], ["ar_l", 9.0], ["ar_o", 9.0], ["ar_uep", 9.0], ["ar_uia", 9.0], ["ar_a", 9.0], ["l_o", 5.0], ["l_uep", 5.0], ["l_uia", 5.0], ["l_a", 5.0], ["o_uep", 5.0], ["o_uia", 5.0], ["o_a", 5.0], ["uep_uia", 5.0], ["uep_a", 5.0], ["uia_a", 5.0]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "surveys" SET "updated_at" = ?, "ar_l" = ?, "ar_o" = ?, "ar_uep" = ?, "ar_uia" = ?, "ar_a" = ?, "l_o" = ?, "l_uep" = ?, "l_uia" = ?, "l_a" = ?, "o_uep" = ?, "o_uia" = ?, "o_a" = ?, "uep_uia" = ?, "uep_a" = ?, "uia_a" = ?, "f_weight" = ?, "r_weight" = ?, "p_weight" = ?, "o_weight" = ?, "s_weight" = ?, "c_weight" = ? WHERE "surveys"."id" = ?[0m  [["updated_at", "2018-01-26 07:52:21.404021"], ["ar_l", 5.0], ["ar_o", 5.0], ["ar_uep", 5.0], ["ar_uia", 5.0], ["ar_a", 5.0], ["l_o", 1.0], ["l_uep", 1.0], ["l_uia", 1.0], ["l_a", 1.0], ["o_uep", 1.0], ["o_uia", 1.0], ["o_a", 1.0], ["uep_uia", 1.0], ["uep_a", 1.0], ["uia_a", 1.0], ["f_weight", 0.5], ["r_weight", 0.10000000000000002], ["p_weight", 0.10000000000000002], ["o_weight", 0.10000000000000002], ["s_weight", 0.10000000000000002], ["c_weight", 0.10000000000000002], ["id", 2]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/thank
+Completed 302 Found in 11ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/thank" for 127.0.0.1 at 2018-01-26 15:52:21 +0800
+Processing by SurveysController#thank as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "surveys" WHERE (user_type = 'developer')[0m
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_type = 'developer')[0m
+  Rendering surveys/thank.html.erb within layouts/application
+  Rendered surveys/thank.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 85ms (Views: 81.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-26 15:52:41 +0800
+Processing by SurveysController#index as HTML
+  Rendering surveys/index.html.erb within layouts/application
+  Rendered surveys/index.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 76ms (Views: 74.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-26 15:52:41 +0800
+Processing by SurveysController#index as HTML
+  Rendering surveys/index.html.erb within layouts/application
+  Rendered surveys/index.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 80ms (Views: 77.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/surveys/new" for 127.0.0.1 at 2018-01-26 15:52:43 +0800
+Processing by SurveysController#new as HTML
+  Rendering surveys/new.html.erb within layouts/application
+  Rendered surveys/new.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 80ms (Views: 78.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/surveys" for 127.0.0.1 at 2018-01-26 15:53:00 +0800
+Processing by SurveysController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ppHhXm2BpWh0DKYAB2VA8X7yoyCReggOyQ4lZayLhMz2PI6HvS1eCcbhYanh0xTmrY5Ov/Wvvf5N2NN7smtF7A==", "survey"=>{"name"=>"TEST3", "user_type"=>"user", "ar_l"=>"1", "ar_o"=>"5", "ar_uep"=>"5", "ar_uia"=>"5", "ar_a"=>"5", "l_o"=>"9", "l_uep"=>"9", "l_uia"=>"9", "l_a"=>"9", "o_uep"=>"5", "o_uia"=>"5", "o_a"=>"5", "uep_uia"=>"5", "uep_a"=>"5", "uia_a"=>"5"}, "commit"=>"Submit Survey"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "surveys" ("name", "user_type", "created_at", "updated_at", "ar_l", "ar_o", "ar_uep", "ar_uia", "ar_a", "l_o", "l_uep", "l_uia", "l_a", "o_uep", "o_uia", "o_a", "uep_uia", "uep_a", "uia_a") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "TEST3"], ["user_type", "user"], ["created_at", "2018-01-26 07:53:00.309121"], ["updated_at", "2018-01-26 07:53:00.309121"], ["ar_l", 1.0], ["ar_o", 5.0], ["ar_uep", 5.0], ["ar_uia", 5.0], ["ar_a", 5.0], ["l_o", 9.0], ["l_uep", 9.0], ["l_uia", 9.0], ["l_a", 9.0], ["o_uep", 5.0], ["o_uia", 5.0], ["o_a", 5.0], ["uep_uia", 5.0], ["uep_a", 5.0], ["uia_a", 5.0]]
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "surveys" SET "updated_at" = ?, "ar_l" = ?, "ar_o" = ?, "ar_uep" = ?, "ar_uia" = ?, "ar_a" = ?, "l_o" = ?, "l_uep" = ?, "l_uia" = ?, "l_a" = ?, "o_uep" = ?, "o_uia" = ?, "o_a" = ?, "uep_uia" = ?, "uep_a" = ?, "uia_a" = ?, "f_weight" = ?, "r_weight" = ?, "p_weight" = ?, "o_weight" = ?, "s_weight" = ?, "c_weight" = ? WHERE "surveys"."id" = ?[0m  [["updated_at", "2018-01-26 07:53:00.315414"], ["ar_l", 0.2], ["ar_o", 1.0], ["ar_uep", 1.0], ["ar_uia", 1.0], ["ar_a", 1.0], ["l_o", 5.0], ["l_uep", 5.0], ["l_uia", 5.0], ["l_a", 5.0], ["o_uep", 1.0], ["o_uia", 1.0], ["o_a", 1.0], ["uep_uia", 1.0], ["uep_a", 1.0], ["uia_a", 1.0], ["f_weight", 0.09999999999999994], ["r_weight", 0.5], ["p_weight", 0.09999999999999999], ["o_weight", 0.09999999999999999], ["s_weight", 0.09999999999999999], ["c_weight", 0.09999999999999999], ["id", 3]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/thank
+Completed 302 Found in 12ms (ActiveRecord: 4.3ms)
+
+
+Started GET "/thank" for 127.0.0.1 at 2018-01-26 15:53:00 +0800
+Processing by SurveysController#thank as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "surveys" WHERE (user_type = 'user')[0m
+  [1m[36mSurvey Load (0.2ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_type = 'user')[0m
+  Rendering surveys/thank.html.erb within layouts/application
+  Rendered surveys/thank.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 77ms (Views: 74.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-26 15:53:16 +0800
+Processing by SurveysController#index as HTML
+Started GET "/" for 127.0.0.1 at 2018-01-26 15:53:16 +0800
+  Rendering surveys/index.html.erb within layouts/application
+Processing by SurveysController#index as HTML
+  Rendered surveys/index.html.erb within layouts/application (1.5ms)
+  Rendering surveys/index.html.erb within layouts/application
+  Rendered surveys/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 164ms (Views: 161.7ms | ActiveRecord: 0.0ms)
+
+
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 143ms (Views: 141.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/surveys/new" for 127.0.0.1 at 2018-01-26 15:53:18 +0800
+Processing by SurveysController#new as HTML
+  Rendering surveys/new.html.erb within layouts/application
+  Rendered surveys/new.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 83ms (Views: 81.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/surveys" for 127.0.0.1 at 2018-01-26 15:53:35 +0800
+Processing by SurveysController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"y+AONM2tXkp8cicWvxqrk7nR4Jv5WZOzmwc47lU4/ZibTWHtHQGlK86f4L9ZrP+Eaq0NBJ2MJkMf0c7wS9g8uA==", "survey"=>{"name"=>"TEST4", "user_type"=>"user", "ar_l"=>"7", "ar_o"=>"3", "ar_uep"=>"7", "ar_uia"=>"5", "ar_a"=>"3", "l_o"=>"5", "l_uep"=>"5", "l_uia"=>"5", "l_a"=>"5", "o_uep"=>"6", "o_uia"=>"5", "o_a"=>"6", "uep_uia"=>"5", "uep_a"=>"5", "uia_a"=>"4"}, "commit"=>"Submit Survey"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "surveys" ("name", "user_type", "created_at", "updated_at", "ar_l", "ar_o", "ar_uep", "ar_uia", "ar_a", "l_o", "l_uep", "l_uia", "l_a", "o_uep", "o_uia", "o_a", "uep_uia", "uep_a", "uia_a") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "TEST4"], ["user_type", "user"], ["created_at", "2018-01-26 07:53:35.674440"], ["updated_at", "2018-01-26 07:53:35.674440"], ["ar_l", 7.0], ["ar_o", 3.0], ["ar_uep", 7.0], ["ar_uia", 5.0], ["ar_a", 3.0], ["l_o", 5.0], ["l_uep", 5.0], ["l_uia", 5.0], ["l_a", 5.0], ["o_uep", 6.0], ["o_uia", 5.0], ["o_a", 6.0], ["uep_uia", 5.0], ["uep_a", 5.0], ["uia_a", 4.0]]
+  [1m[35m (4.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "surveys" SET "updated_at" = ?, "ar_l" = ?, "ar_o" = ?, "ar_uep" = ?, "ar_uia" = ?, "ar_a" = ?, "l_o" = ?, "l_uep" = ?, "l_uia" = ?, "l_a" = ?, "o_uep" = ?, "o_uia" = ?, "o_a" = ?, "uep_uia" = ?, "uep_a" = ?, "uia_a" = ?, "f_weight" = ?, "r_weight" = ?, "p_weight" = ?, "o_weight" = ?, "s_weight" = ?, "c_weight" = ? WHERE "surveys"."id" = ?[0m  [["updated_at", "2018-01-26 07:53:35.685447"], ["ar_l", 3.0], ["ar_o", 0.3333333333333333], ["ar_uep", 3.0], ["ar_uia", 1.0], ["ar_a", 0.3333333333333333], ["l_o", 1.0], ["l_uep", 1.0], ["l_uia", 1.0], ["l_a", 1.0], ["o_uep", 2.0], ["o_uia", 1.0], ["o_a", 2.0], ["uep_uia", 1.0], ["uep_a", 1.0], ["uia_a", 0.5], ["f_weight", 0.17577165980497603], ["r_weight", 0.13067173773996849], ["p_weight", 0.24651824262976152], ["o_weight", 0.1124273575009702], ["s_weight", 0.13310323749386335], ["c_weight", 0.2015077648304604], ["id", 4]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/thank
+Completed 302 Found in 18ms (ActiveRecord: 7.5ms)
+
+
+Started GET "/thank" for 127.0.0.1 at 2018-01-26 15:53:35 +0800
+Processing by SurveysController#thank as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "surveys" WHERE (user_type = 'user')[0m
+  [1m[36mSurvey Load (0.1ms)[0m  [1m[34mSELECT "surveys".* FROM "surveys" WHERE (user_type = 'user')[0m
+  Rendering surveys/thank.html.erb within layouts/application
+  Rendered surveys/thank.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 80ms (Views: 77.3ms | ActiveRecord: 0.3ms)
+
+

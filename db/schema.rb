@@ -10,49 +10,34 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171008101720) do
+ActiveRecord::Schema.define(version: 20180126071926) do
 
   create_table "surveys", force: :cascade do |t|
     t.string "name"
     t.string "user_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.float "fr"
-    t.float "fp"
-    t.float "fo"
-    t.float "fs"
-    t.float "fc"
-    t.float "fm"
-    t.float "ft"
-    t.float "rp"
-    t.float "ro"
-    t.float "rs"
-    t.float "rc"
-    t.float "rm"
-    t.float "rt"
-    t.float "po"
-    t.float "ps"
-    t.float "pc"
-    t.float "pm"
-    t.float "pt"
-    t.float "os"
-    t.float "oc"
-    t.float "om"
-    t.float "ot"
-    t.float "sc"
-    t.float "sm"
-    t.float "st"
-    t.float "cm"
-    t.float "ct"
-    t.float "mt"
+    t.float "ar_l"
+    t.float "ar_o"
+    t.float "ar_uep"
+    t.float "ar_uia"
+    t.float "ar_a"
+    t.float "l_o"
+    t.float "l_uep"
+    t.float "l_uia"
+    t.float "l_a"
+    t.float "o_uep"
+    t.float "o_uia"
+    t.float "o_a"
+    t.float "uep_uia"
+    t.float "uep_a"
+    t.float "uia_a"
     t.float "f_weight"
     t.float "r_weight"
     t.float "p_weight"
     t.float "o_weight"
     t.float "s_weight"
     t.float "c_weight"
-    t.float "m_weight"
-    t.float "t_weight"
   end
 
 end
